@@ -1,0 +1,41 @@
+@import "~@angular/material/theming";
+@import "./src/lib/core/theming/palette";
+
+$graffiti-typography: mat-typography-config(
+  $font-family: "Nunito Sans, sans-serif",
+  $display-4: mat-typography-level(164px, 96px, 800, "Kalam", $letter-spacing: -0.02em),
+  $display-3: mat-typography-level(76px, 70px, 700, "Kalam", $letter-spacing: -0.02em),
+  $display-2: mat-typography-level(50px, 50px, 500),
+  $display-1: mat-typography-level(76px, 64px, 600, "Kalam", $letter-spacing: -0.02em),
+  $headline: mat-typography-level(34px, 32px, 400),
+  $title: mat-typography-level(34px, 40px, 400),
+  $subheading-2: mat-typography-level(28px, 32px, 500),
+  $subheading-1: mat-typography-level(24px, 24px, 400),
+  $body-2: mat-typography-level(18px, 24px, 500),
+  $body-1: mat-typography-level(18px, 20px, 400),
+  $caption: mat-typography-level(12px, 20px, 300),
+  $button: mat-typography-level(20px, 14px, 500),
+  $input: mat-typography-level(inherit, 1.125, 400)
+);
+
+@include mat-core($graffiti-typography);
+
+$graffiti-primary: mat-palette($ch-blue, 500);
+$graffiti-accent: mat-palette($mat-green);
+$graffiti-warn: mat-palette($mat-red);
+$graffiti-theme: mat-light-theme($graffiti-primary, $graffiti-accent, $graffiti-warn);
+
+@mixin footer-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+
+  footer {
+    overflow: hidden;
+    text-align: center;
+    color: whitesmoke;
+    background-color: mat-color($primary);
+  }
+}
+
+@include angular-material-theme($graffiti-theme);
+@include footer-theme($graffiti-theme);
