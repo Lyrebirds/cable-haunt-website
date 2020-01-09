@@ -2,8 +2,7 @@
 <link href="https://fonts.googleapis.com/css?family=Kalam|Nunito+Sans&display=swap" rel="stylesheet">
 
 <div class="navigation">
-  <mat-toolbar color="primary" [ngClass]="{'toolbar': true, 'transparent': false }"
-    [ngClass.gt-sm]="{'toolbar': true, 'transparent': !scrolled }">
+  <mat-toolbar color="primary" [ngClass]="{'toolbar': true, 'transparent': false }" [ngClass.gt-sm]="{'toolbar': true, 'transparent': !scrolled }">
     <button mat-icon-button (click)="sidenav.toggle();" fxShow="true" fxHide.gt-sm>
       <ng-container *ngIf="!sidenav.opened; else elseTemplate">
         <mat-icon inline=true>menu</mat-icon>
@@ -16,8 +15,7 @@
     <div class="mat-headline">{{ title }}</div>
     <span fxFlex="1 1 auto"></span>
     <div fxShow="true" fxHide.lt-md="true">
-      <a mat-button (click)="scrollTo(anchor.id)" *ngFor="let anchor of anchors"
-        [ngClass.gt-sm]="{ 'button-hover': !scrolled }">
+      <a mat-button (click)="scrollTo(anchor.id)" *ngFor="let anchor of anchors" [ngClass.gt-sm]="{ 'button-hover': !scrolled }">
         <div class="mat-button">
           {{ anchor.name }}
         </div>
@@ -54,8 +52,7 @@
           </p>
           <p class="mat-body-2">
             The vulnerable endpoint is exposed to the local network, but can be reached remotely due to improper
-            websocket usage. Through malicious communication with this endpoint, a <a target="_blank"
-              href="https://en.wikipedia.org/wiki/Buffer_overflow">buffer overflow</a> can be exploited to gain control
+            websocket usage. Through malicious communication with this endpoint, a <a target="_blank" href="https://en.wikipedia.org/wiki/Buffer_overflow">buffer overflow</a> can be exploited to gain control
             of the modem. The technical report can be downloaded below.
           </p>
           <div class="card-container" fxLayout="row wrap" fxLayoutAlign="center stretch">
@@ -66,9 +63,7 @@
                   help expand the research</p>
               </mat-card-content>
               <mat-card-actions>
-                <a id="technical-report-download-button"
-                  href="https://github.com/Lyrebirds/Cable-Haunt-Report/releases/download/2.4/report.pdf"
-                  mat-raised-button color="primary">Download</a>
+                <a id="technical-report-download-button" href="https://github.com/Lyrebirds/Cable-Haunt-Report/releases/download/2.4/report.pdf" mat-raised-button color="primary">Download</a>
               </mat-card-actions>
             </mat-card>
             <mat-card fxLayout="column">
@@ -78,8 +73,7 @@
                   exploiting Cable Haunt for yourself.</p>
               </mat-card-content>
               <mat-card-actions>
-                <a target="_blank" href="https://github.com/Lyrebirds/Fast8690-exploit" mat-raised-button
-                  color="primary">View Exploit</a>
+                <a target="_blank" href="https://github.com/Lyrebirds/Fast8690-exploit" mat-raised-button color="primary">View Exploit</a>
               </mat-card-actions>
             </mat-card>
           </div>
@@ -99,16 +93,12 @@
             <ul>
               <li><a target="_blank" href="https://www.linkedin.com/in/alexander-krog-91b6613b/">Alexander Dalsgaard
                   Krog</a> (<a target="_blank" href="https://lyrebirds.dk">Lyrebirds</a>)</li>
-              <li><a target="_blank" href="https://www.linkedin.com/in/jens-staermose/">Jens Hegner Stærmose</a> (<a
-                  target="_blank" href="https://lyrebirds.dk">Lyrebirds</a>)</li>
-              <li><a target="_blank" href="https://www.linkedin.com/in/kasper-terndrup/">Kasper Kohsel Terndrup</a> (<a
-                  target="_blank" href="https://lyrebirds.dk">Lyrebirds</a>)</li>
+              <li><a target="_blank" href="https://www.linkedin.com/in/jens-staermose/">Jens Hegner Stærmose</a> (<a target="_blank" href="https://lyrebirds.dk">Lyrebirds</a>)</li>
+              <li><a target="_blank" href="https://www.linkedin.com/in/kasper-terndrup/">Kasper Kohsel Terndrup</a> (<a target="_blank" href="https://lyrebirds.dk">Lyrebirds</a>)</li>
               <li><a target="_blank" href="https://www.linkedin.com/in/simon-vandel-sillesen-96469b90/">Simon Vandel
                   Sillesen</a> (Independent)</li>
             </ul>
-            If you wish to contact us regarding Cable Haunt, you can reach us at <a
-              href="mailto:cablehaunt@lyrebirds.dk" target="_blank">cablehaunt@lyrebirds.dk</a>, or on twitter <a
-              target="_blank" href="https://twitter.com/lyrebirds_dk" target="_blank">@lyrebirds_dk</a>.
+            If you wish to contact us regarding Cable Haunt, you can reach us at <a href="mailto:cablehaunt@lyrebirds.dk" target="_blank">cablehaunt@lyrebirds.dk</a>, or on twitter <a target="_blank" href="https://twitter.com/lyrebirds_dk" target="_blank">@lyrebirds_dk</a>.
           </div>
           <div id="how-it-works" class="mat-display-2">How it Works</div>
           <p class="mat-body-2">
@@ -120,8 +110,7 @@
           <div class="mat-title">Accessing the Endpoint</div>
           <p class="mat-body-2">
             The endpoint, which serves a tool called spectrum analyzer, uses a websocket for communication with the
-            graphical frontend displayed in a browser. Whereas <a target="_blank"
-              href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank">CORS</a> would restrict
+            graphical frontend displayed in a browser. Whereas <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank">CORS</a> would restrict
             access to such an endpoint for HTTP requests, websocket is not protected by this protocol. Therefore, it is
             up to the server to verify the relevant request parameters added by the browser. Because these parameters
             are never inspected by the cable modem, the websocket will accept requests made by javascript running in the
@@ -140,14 +129,15 @@
           </p>
           <div class="mat-body-2">
             <ul>
-              <li>Change all associated MAC Addresses</li>
-              <li>Change serial numbers</li>
+              <li>Change default DNS server</li>
+              <li>Conduct remote man-in-the-middle attacks</li>
+              <li>Hot-swap code or even the entire firmware</li>
+              <li>Upload, flash, and upgrade firmware silently</li>
               <li>Disable ISP firmware upgrade</li>
               <li>Change every config file and settings</li>
               <li>Get and Set SNMP OID values</li>
-              <li>Upload, flash, and upgrade firmware silently</li>
-              <li>Hot-swap code or even the entire firmware</li>
-              <li>Conduct Man-in-the-middle attacks</li>
+              <li>Change all associated MAC Addresses</li>
+              <li>Change serial numbers</li>
               <li>Be exploited in botnet</li>
             </ul>
           </div>
@@ -241,9 +231,7 @@
             <p class="mat-body-2">
               Some of these modems have only been confirmed by third parties and modems can
               therefore occur multiple times with different firmware and have missing information. If you want to help
-              us expand this list, we thank you, and ask that you please read the <a
-                (click)="scrollToAndExpand('faq-how-can-i-help', 5)">"How Can I Help"-FAQ</a> below and contact us at <a
-                href="mailto:cablehaunt@lyrebirds.dk">cablehaunt@lyrebirds.dk</a>.
+              us expand this list, we thank you, and ask that you please read the <a (click)="scrollToAndExpand('faq-how-can-i-help', 5)">"How Can I Help"-FAQ</a> below and contact us at <a href="mailto:cablehaunt@lyrebirds.dk">cablehaunt@lyrebirds.dk</a>.
             </p>
             <div class="mat-title">
               Vulnerable Modems
@@ -277,14 +265,12 @@
             <p class="mat-body-2">
               If your modem is not in the list above it could still be vulnerable. If you wish to verify if this is the
               case we highly
-              recommend reading our report before continuing. It can be <a
-                (click)="scrollToCenter('technical-report-download-button')">downloaded above</a>.
+              recommend reading our report before continuing. It can be <a (click)="scrollToCenter('technical-report-download-button')">downloaded above</a>.
             </p>
             <p class="mat-body-2">
               The report contains the full exploit and all technical details needed to replicate, understand and test
               for
-              the vulnerability. However, a tool to check whether your modem is vulnerable can be found on <a
-                target="_blank" href="https://github.com/Lyrebirds/cable-haunt-vulnerability-test">here</a>. <b>ONLY RUN
+              the vulnerability. However, a tool to check whether your modem is vulnerable can be found on <a target="_blank" href="https://github.com/Lyrebirds/cable-haunt-vulnerability-test">here</a>. <b>ONLY RUN
                 THIS TEST ON EQUIPMENT YOU OWN</b>.
               The script automatically scans your network to find the spectrum analyser and tries to establish
               connection to the websocket. The script will test if the modem rejects requests from an external origin,
@@ -295,8 +281,7 @@
               completely vulnerable.
             </p>
             <p class="mat-body-2">
-              If you venture into this endeavour, we would very much like to hear your results at <a
-                href="mailto:cablehaunt@lyrebirds.dk">cablehaunt@lyrebirds.dk</a>, no matter how small or
+              If you venture into this endeavour, we would very much like to hear your results at <a href="mailto:cablehaunt@lyrebirds.dk">cablehaunt@lyrebirds.dk</a>, no matter how small or
               big, or if they are already posted here.
             </p>
           </mat-expansion-panel>
@@ -316,14 +301,12 @@
                 <p class="mat-body-2">
                   The most important thing right now is to get this information out to the modem manufacturers as
                   quickly as possible, such that firmware updates can be created for modems still affected.
-                  If your ISP have already reported that they have fixed the issue, we will add them to the <a
-                    (click)="scrollToAndExpand('faq-am-i-affected', 0)">list above</a>.
+                  If your ISP have already reported that they have fixed the issue, we will add them to the <a (click)="scrollToAndExpand('faq-am-i-affected', 0)">list above</a>.
                   If your ISP is not in this list, we recommend that you contact them and ask if your unit is or ever
                   was vulnerable to Cable Haunt.
                 </p>
                 <p class="mat-body-2">
-                  If you are the owner of your modem, start by checking if the modem is on the <a
-                    (click)="scrollToAndExpand('faq-is-my-modem-vulnerable', 4)">list
+                  If you are the owner of your modem, start by checking if the modem is on the <a (click)="scrollToAndExpand('faq-is-my-modem-vulnerable', 4)">list
                     of vulnerable modems</a>, and if it has an updated firmware available. Even if your modem is not on
                   the list, it may still be vulnerable. Check with the manufacturer of your modem if the latest firmware
                   prevents Cable Haunt, and if the modem were ever vulnerable. If you suspect that your modem has been
@@ -349,14 +332,12 @@
                   personnel read the <a (click)="scrollToAndExpand('faq-is-my-modem-vulnerable', 4)">"Is My Modem
                     Vulnerable"-FAQ</a> where they find a list containing modems already known to be vulnerable and
                   tools that help them test modems not included in the list. We also highly recommend letting your
-                  technical personnel download and read <a
-                    (click)="scrollToCenter('technical-report-download-button')">the technical report</a>. The report
+                  technical personnel download and read <a (click)="scrollToCenter('technical-report-download-button')">the technical report</a>. The report
                   contains the full vulnerability and all technical details needed to replicate, understand and test for
                   the vulnerability. This should help them understand the vulnerability in depth and determine which of
                   your modems are affected. When you have confirmed which of your modems are vulnerable, please let us
                   know the model and latest affected firmware version so that we can append the models to the list of
-                  affected modems. If you need further help you are welcome to <a
-                    href="mailto:cablehaunt@lyrebirds.dk">contact us</a> for assistance in determining which of your
+                  affected modems. If you need further help you are welcome to <a href="mailto:cablehaunt@lyrebirds.dk">contact us</a> for assistance in determining which of your
                   cable modems are affected.
                 </p>
                 <p class="mat-body-2">
@@ -366,8 +347,7 @@
                   to create a new firmware that is not vulnerable which you can roll out as quickly as possible. There
                   are possible mitigation strategies you can employ while your manufacturer creates the new firmware but
                   these are out of scope for this FAQ. If you need help with mitigation or firmware for modems that are
-                  out of support, you are welcome to contact <a
-                    href="mailto:contact@lyrebirds.dk">contact@lyrebirds.dk</a>.
+                  out of support, you are welcome to contact <a href="mailto:contact@lyrebirds.dk">contact@lyrebirds.dk</a>.
                 </p>
                 <p class="mat-body-2">
                   While rolling out the firmware it is important to keep your customers informed so they know exactly
@@ -385,8 +365,7 @@
                 <p class="mat-body-2">
                   The vulnerabilities can be found in different variations across different firmware versions. As a
                   small team, we lack the means to map out the affected systems, and we would be very thankful for any
-                  help with expanding the list of confirmed vulnerable cable modems. Please download the <a
-                    (click)="scrollToCenter('technical-report-download-button')">technical report</a> and test any
+                  help with expanding the list of confirmed vulnerable cable modems. Please download the <a (click)="scrollToCenter('technical-report-download-button')">technical report</a> and test any
                   hardware you have available. Please <a href="mailto:cablehaunt@lyrebirds.dk">inform us</a> of any
                   modem and firmware version not <a (click)="scrollToAndExpand('faq-is-my-modem-vulnerable', 4)">listed
                     above</a> that you know or suspect is affected. Exploits of this kind often have too long a
@@ -443,7 +422,7 @@
             <p class="mat-body-2">
               <a target="_blank" href="https://cve.mitre.org/">CVE®</a> is a dictionary that provides definitions for
               publicly disclosed cyber security vulnerabilities and exposures.
-              CVE-2019-19494 is the official reference to this vulnerability and CVE-2019-19495 is another more specific
+              <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19494">CVE-2019-19494</a> is the official reference to this vulnerability and <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19495">CVE-2019-19495</a> is another more specific
               vulnerability only targeting the technicolor TC7230 modem gaining the same access.
               In the report CVE-2019-19495 is explained under appendix C.1.
             </p>
