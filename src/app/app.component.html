@@ -398,8 +398,26 @@
             </mat-expansion-panel-header>
             <p class="mat-body-2">
               No. This does not break encryption, as long as your connection is properly established between you and the
-              intended recipient. However, your modem is most likely doing your DNS lookups and can act as a proxy, so you might still be in some trouble.
+              intended recipient. However, your modem is most likely doing your DNS lookups and can act as a proxy, so
+              you might still be in some trouble.
               With mechanisms like HSTS, exploiting this is becoming increasingly difficult, but not impossible.
+            </p>
+          </mat-expansion-panel>
+          <mat-expansion-panel [(expanded)]="expanded[10]">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Am I Safe If My Modem Has a Randomized Password?
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p class="mat-body-2">
+              Probably not. The randomized password is usually only for the administration panel. Cable Haunt does not
+              attack the administration panel, but a different web service, which runs separately. It is theoretically
+              possible, that your model has randomized passwords for the spectrum analyzer as well, but it is highly
+              unlikely.
+            </p>
+            <p class="mat-body-2">
+              There is also an entire discussion to be had about shared passwords for 'technicians', which circumvent
+              the randomized passwords given on a sticker, but that is an issue for a different site.
             </p>
           </mat-expansion-panel>
           <mat-expansion-panel [(expanded)]="expanded[6]">
