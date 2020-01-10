@@ -71,6 +71,20 @@ export class AppComponent {
     }, 500);
   }
 
+  scrollToExpandScrollTo(firstId:string, secondId:string, index: number){
+    let delay = 0;
+    if(!this.expanded[index]){
+      let el1 = document.getElementById(firstId);
+      el1.scrollIntoView({ behavior: "smooth" });
+      this.expand(index);
+      delay = 1000;
+    }
+    let el2 = document.getElementById(secondId);
+    setTimeout(function(){
+      el2.scrollIntoView({ behavior: "smooth" });
+    }, delay);
+  }
+
   displayedColumns: string[] = ['model', 'firmwareVersion', 'port', 'defaultUser'];
   dataSource = vulnerableModems;
 }
