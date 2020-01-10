@@ -62,6 +62,14 @@ export class AppComponent {
     this.expand(index);
     //el.nextSibling. = true;
   }
+  
+  expandAndScrollTo(id:string, index: number) {
+    this.expand(index);
+    let el = document.getElementById(id);
+    setTimeout(function(){
+      el.scrollIntoView({ behavior: "smooth" });
+    }, 500);
+  }
 
   displayedColumns: string[] = ['model', 'firmwareVersion', 'port', 'defaultUser'];
   dataSource = vulnerableModems;

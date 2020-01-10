@@ -195,10 +195,10 @@
             </p>
             <p class="mat-body-2">
               Some of these modems have only been confirmed by third parties and modems can therefore occur multiple times with different firmware and have missing information. If you want to help us expand this list, we thank you, and ask that you please read the <a
-                (click)="scrollToAndExpand('faq-how-can-i-help', 5)">"What Should I Do?"-FAQ</a> below and contact us at <a
+                (click)="scrollToAndExpand('faq-how-can-i-help', 4)">"What Should I Do?"-FAQ</a> below and contact us at <a
                 href="mailto:cablehaunt@lyrebirds.dk">cablehaunt@lyrebirds.dk</a>.
             </p>
-            <div class="mat-title">
+            <div id="faq-vulnerable-modems-sub" class="mat-title">
               Vulnerable Modems
             </div>
             <p class="mat-body-2">
@@ -311,7 +311,7 @@
                 </p>
                 <p class="mat-body-2">
                   If you are the owner of your modem, start by checking if the modem is on the <a
-                    (click)="scrollToAndExpand('faq-am-i-affected', 0)">list
+                    (click)="expandAndScrollTo('faq-vulnerable-modems-sub', 0)">list
                     of vulnerable modems</a>, and if it has an updated firmware available. Even if your modem is not on
                   the list, it may still be vulnerable. Check with the manufacturer of your modem if the latest firmware
                   prevents Cable Haunt, and if the modem were ever vulnerable. If you suspect that your modem has been
@@ -375,7 +375,7 @@
                   help with expanding the list of confirmed vulnerable cable modems. Please download the <a
                     (click)="scrollToCenter('technical-report-download-button')">technical report</a> and test any
                   hardware you have available. Please <a href="mailto:cablehaunt@lyrebirds.dk">inform us</a> of any
-                  modem and firmware version not <a (click)="scrollToAndExpand('faq-is-my-modem-vulnerable', 4)">listed
+                  modem and firmware version not <a (click)="expandAndScrollTo('faq-vulnerable-modems-sub', 0)">listed
                     above</a> that you know or suspect is affected. Exploits of this kind often have too long a
                   lifetime, because it can be difficult to determine exactly which systems are affected. This is
                   especially true for embedded systems.
@@ -391,7 +391,7 @@
             </mat-expansion-panel-header>
             <p class="mat-body-2">
               No. This does not break encryption, as long as your connection is properly established between you and the
-              intended recipient. However, if your modem is doing your DNS lookups, you might still be in some trouble.
+              intended recipient. However, your modem is most likely doing your DNS lookups and can act as a proxy, so you might still be in some trouble.
               With mechanisms like HSTS, exploiting this is becoming increasingly difficult, but not impossible.
             </p>
           </mat-expansion-panel>
