@@ -163,10 +163,10 @@
             </mat-expansion-panel-header>
             <p class="mat-body-2">
               Start by determining if you get internet through a cable modem, since only cable modems are affected.
-              If you do, your modem have most likely have been provided by your ISP. This means that the ISP is
-              responsible for the firmware running on it and most likely have the means to
-              fix the issue. The ISPs that have reported to us that they have fixed their devices, can be seen in the
-              list below.
+              If you do, you may be affected.
+              Most people get their cable modem through their ISP.
+              This means that the ISP is responsible for the firmware running on it and most likely have the means to fix the issue.
+              The ISPs that have reported to us that they have fixed their devices, can be seen in the list below.
             </p>
             <p class="mat-body-2">
               <mat-expansion-panel>
@@ -186,10 +186,71 @@
               </mat-expansion-panel>
             </p>
             <p class="mat-body-2">
-              If your ISP is not on the list it is still possible that they have fixed the issue, but not informed
-              us. We recommend calling them and asking. If you find out they have fixed or are planning to fix the
-              issue, we would very much appreciate if
-              you would inform us at <a href="mailto:cablehaunt@lyrebirds.dk">cablehaunt@lyrebirds.dk</a>
+              If your ISP is not on the list it is still possible that they have fixed the issue, but not informed us.
+              We recommend calling them and asking.
+              If you find out they have fixed or are planning to fix the issue, we would very much appreciate if you would inform us at <a href="mailto:cablehaunt@lyrebirds.dk">cablehaunt@lyrebirds.dk</a>
+            </p>
+            <p class="mat-body-2">
+              If your modem is not supplied by your IPS og you want to check for yourself we are working on getting as much informamtion as we can on which modems are vulnerable. Several modems have already been confirmed to be vulnerable and we appreciate all the help we can get and have already recieved expanding the list.
+            </p>
+            <p class="mat-body-2">
+              Some of these modems have only been confirmed by third parties and modems can therefore occur multiple times with different firmware and have missing information. If you want to help us expand this list, we thank you, and ask that you please read the <a
+                (click)="scrollToAndExpand('faq-how-can-i-help', 5)">"What Should I Do?"-FAQ</a> below and contact us at <a
+                href="mailto:cablehaunt@lyrebirds.dk">cablehaunt@lyrebirds.dk</a>.
+            </p>
+            <div class="mat-title">
+              Vulnerable Modems
+            </div>
+            <p class="mat-body-2">
+              If you know your modems model and firmware version you can try to find it in the following list of modems confirmed vulnerable.
+              The information needed can typically be found in the configuration user interface of the modem, running on the default gateway.
+              In the list the firmware version is the latest firmware that have been confirmed to be vulnerable.
+              The port is the port on the local network where the spectrum analyser is running.
+              If the spectrum analyser requires credentials, they are also provided together with the authentication type used.
+            </p>
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 mat-body-2">
+              <ng-container matColumnDef="model">
+                <th mat-header-cell *matHeaderCellDef> Model </th>
+                <td mat-cell *matCellDef="let element"> {{element.model}} </td>
+              </ng-container>
+              <ng-container matColumnDef="firmwareVersion">
+                <th mat-header-cell *matHeaderCellDef> Firmware Version </th>
+                <td mat-cell *matCellDef="let element"> {{element.firmwareVersion}} </td>
+              </ng-container>
+              <ng-container matColumnDef="port">
+                <th mat-header-cell *matHeaderCellDef> Port </th>
+                <td mat-cell *matCellDef="let element"> {{element.port}} </td>
+              </ng-container>
+              <ng-container matColumnDef="defaultUser">
+                <th mat-header-cell *matHeaderCellDef> Default Credentials </th>
+                <td mat-cell *matCellDef="let element"> {{element.defaultUser}} </td>
+              </ng-container>
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <p class="mat-body-2">
+              If your modem is not in the list above it could still be vulnerable.
+              If you wish to verify if this is the case we highly recommend reading our report before continuing. 
+              It can be <a
+                (click)="scrollToCenter('technical-report-download-button')">downloaded above</a>.
+            </p>
+            <p class="mat-body-2">
+              The report contains the full exploit and all technical details needed to replicate, understand and test
+              for
+              the vulnerability. However, we are working on a tool to check whether your modem is vulnerable, which can
+              be found <a target="_blank" href="https://github.com/Lyrebirds/cable-haunt-vulnerability-test">here</a>
+              once released. <b>ONLY RUN THIS TEST ON EQUIPMENT YOU OWN</b>.
+              The script automatically scans your network to find the spectrum analyser and tries to establish
+              connection to the websocket. The script will test if the modem rejects requests from an external origin,
+              by setting the header parameters similar to how a browser or other modern client would. If the
+              connection is established the spectrum analyser can be reached indirectly from outside the local network
+              and is, at least partly, vulnerable. The script will afterwards, with your permission, send a specially
+              crafted package that reboots the modem if vulnerable. If this happens the modem is completely vulnerable.
+            </p>
+            <p class="mat-body-2">
+              If you venture into this endeavour, we would very much like to hear your results at <a
+                href="mailto:cablehaunt@lyrebirds.dk">cablehaunt@lyrebirds.dk</a>, no matter how small or
+              big, or if they are already posted here.
             </p>
           </mat-expansion-panel>
           <mat-expansion-panel [(expanded)]="expanded[1]">
@@ -227,80 +288,7 @@
               exploitation.
             </p>
           </mat-expansion-panel>
-          <mat-expansion-panel id="faq-is-my-modem-vulnerable" [(expanded)]="expanded[4]">
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Is My Modem Vulnerable?
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <p class="mat-body-2">
-              Several modems have already been confirmed to be vulnerable. To check for yourself if your modem have a
-              vulnerable firmware running, requires you to know your modems
-              model and firmware version. This can typically be found in the configuration user interface of the modem,
-              running on the default gateway.
-            </p>
-            <p class="mat-body-2">
-              Some of these modems have only been confirmed by third parties and modems can
-              therefore occur multiple times with different firmware and have missing information. If you want to help
-              us expand this list, we thank you, and ask that you please read the <a
-                (click)="scrollToAndExpand('faq-how-can-i-help', 5)">"How Can I Help"-FAQ</a> below and contact us at <a
-                href="mailto:cablehaunt@lyrebirds.dk">cablehaunt@lyrebirds.dk</a>.
-            </p>
-            <div class="mat-title">
-              Vulnerable Modems
-            </div>
-            <p class="mat-body-2">
-              Below is the list of confirmed vulnerable modems. The firmware version is the latest firmware that have
-              been confirmed to be vulnerable. The port is the port on the local network where the spectrum analyser is
-              running. If the spectrum analyser requires credentials, they are also provided together with the
-              authentication type used.
-            </p>
-            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 mat-body-2">
-              <ng-container matColumnDef="model">
-                <th mat-header-cell *matHeaderCellDef> Model </th>
-                <td mat-cell *matCellDef="let element"> {{element.model}} </td>
-              </ng-container>
-              <ng-container matColumnDef="firmwareVersion">
-                <th mat-header-cell *matHeaderCellDef> Firmware Version </th>
-                <td mat-cell *matCellDef="let element"> {{element.firmwareVersion}} </td>
-              </ng-container>
-              <ng-container matColumnDef="port">
-                <th mat-header-cell *matHeaderCellDef> Port </th>
-                <td mat-cell *matCellDef="let element"> {{element.port}} </td>
-              </ng-container>
-              <ng-container matColumnDef="defaultUser">
-                <th mat-header-cell *matHeaderCellDef> Default Credentials </th>
-                <td mat-cell *matCellDef="let element"> {{element.defaultUser}} </td>
-              </ng-container>
-              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-            </table>
-            <p class="mat-body-2">
-              If your modem is not in the list above it could still be vulnerable. If you wish to verify if this is the
-              case we highly
-              recommend reading our report before continuing. It can be <a
-                (click)="scrollToCenter('technical-report-download-button')">downloaded above</a>.
-            </p>
-            <p class="mat-body-2">
-              The report contains the full exploit and all technical details needed to replicate, understand and test
-              for
-              the vulnerability. However, we are working on a tool to check whether your modem is vulnerable, which can
-              be found <a target="_blank" href="https://github.com/Lyrebirds/cable-haunt-vulnerability-test">here</a>
-              once released. <b>ONLY RUN THIS TEST ON EQUIPMENT YOU OWN</b>.
-              The script automatically scans your network to find the spectrum analyser and tries to establish
-              connection to the websocket. The script will test if the modem rejects requests from an external origin,
-              by setting the header parameters similar to how a browser or other modern client would. If the
-              connection is established the spectrum analyser can be reached indirectly from outside the local network
-              and is, at least partly, vulnerable. The script will afterwards, with your permission, send a specially
-              crafted package that reboots the modem if vulnerable. If this happens the modem is completely vulnerable.
-            </p>
-            <p class="mat-body-2">
-              If you venture into this endeavour, we would very much like to hear your results at <a
-                href="mailto:cablehaunt@lyrebirds.dk">cablehaunt@lyrebirds.dk</a>, no matter how small or
-              big, or if they are already posted here.
-            </p>
-          </mat-expansion-panel>
-          <mat-expansion-panel id="faq-how-can-i-help" [(expanded)]="expanded[5]">
+          <mat-expansion-panel id="faq-how-can-i-help" [(expanded)]="expanded[4]">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 What Should I Do?
@@ -316,14 +304,14 @@
                 <p class="mat-body-2">
                   The most important thing right now is to get this information out to the modem manufacturers as
                   quickly as possible, such that firmware updates can be created for modems still affected.
-                  If your ISP have already reported that they have fixed the issue, we will add them to the <a
+                  If your ISP have already reported to us that they have fixed the issue, we will add them to the <a
                     (click)="scrollToAndExpand('faq-am-i-affected', 0)">list above</a>.
                   If your ISP is not in this list, we recommend that you contact them and ask if your unit is or ever
                   was vulnerable to Cable Haunt.
                 </p>
                 <p class="mat-body-2">
                   If you are the owner of your modem, start by checking if the modem is on the <a
-                    (click)="scrollToAndExpand('faq-is-my-modem-vulnerable', 4)">list
+                    (click)="scrollToAndExpand('faq-am-i-affected', 0)">list
                     of vulnerable modems</a>, and if it has an updated firmware available. Even if your modem is not on
                   the list, it may still be vulnerable. Check with the manufacturer of your modem if the latest firmware
                   prevents Cable Haunt, and if the modem were ever vulnerable. If you suspect that your modem has been
@@ -346,8 +334,7 @@
                 </p>
                 <p class="mat-body-2">
                   First you should determine which of you modems are vulnerable. We recommend letting your technical
-                  personnel read the <a (click)="scrollToAndExpand('faq-is-my-modem-vulnerable', 4)">"Is My Modem
-                    Vulnerable"-FAQ</a> where they find a list containing modems already known to be vulnerable and
+                  personnel read the <a (click)="scrollToAndExpand('faq-am-i-affected', 0)">"Am I Affected?"-FAQ</a> where they find a list containing modems already known to be vulnerable and
                   tools that help them test modems not included in the list. We also highly recommend letting your
                   technical personnel download and read <a
                     (click)="scrollToCenter('technical-report-download-button')">the technical report</a>. The report
@@ -396,7 +383,7 @@
               </mat-expansion-panel>
             </p>
           </mat-expansion-panel>
-          <mat-expansion-panel [(expanded)]="expanded[6]">
+          <mat-expansion-panel [(expanded)]="expanded[5]">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 Does This Break SSL/TLS?
@@ -408,7 +395,7 @@
               With mechanisms like HSTS, exploiting this is becoming increasingly difficult, but not impossible.
             </p>
           </mat-expansion-panel>
-          <mat-expansion-panel [(expanded)]="expanded[7]">
+          <mat-expansion-panel [(expanded)]="expanded[6]">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 Does This Work In All Browsers?
@@ -420,7 +407,7 @@
               Firefox.
             </p>
           </mat-expansion-panel>
-          <mat-expansion-panel [(expanded)]="expanded[8]">
+          <mat-expansion-panel [(expanded)]="expanded[7]">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 What is CVE-2019-19494 and CVE-2019-19495?
@@ -437,7 +424,7 @@
               In the report CVE-2019-19495 is explained under appendix C.1.
             </p>
           </mat-expansion-panel>
-          <mat-expansion-panel [(expanded)]="expanded[9]">
+          <mat-expansion-panel [(expanded)]="expanded[8]">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 Why is it called Cable Haunt?
@@ -450,7 +437,7 @@
               exorcised from all affected modems... Also, spectre was taken.
             </p>
           </mat-expansion-panel>
-          <mat-expansion-panel [(expanded)]="expanded[10]">
+          <mat-expansion-panel [(expanded)]="expanded[9]">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 What is Graffiti And How Is It Associated With Cable Haunt?
