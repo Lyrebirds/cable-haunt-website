@@ -86,7 +86,74 @@ export class AppComponent {
   }
 
   displayedColumns: string[] = ['model', 'firmwareVersion', 'port', 'defaultUser'];
-  dataSource = vulnerableModems;
+  
+  vulnerableModems: modem[] = [
+    {
+      model: 'Sagemcom F@st 3890',
+      firmwareVersion: '50.10.19.*',
+      port: '6080',
+      defaultUser: 'spectrum:spectrum (Authorization: Basic)'
+    }, {
+      model: 'Sagemcom F@st 3686',
+      firmwareVersion: 'SIP_3.428.0-*',
+      port: '6080',
+      defaultUser: 'spectrum:spectrum (Authorization: Basic)'
+    }, {
+      model: 'Technicolor TC7230',
+      firmwareVersion: 'STEB 01.25',
+      port: '8080',
+      defaultUser: 'No authorization needed'
+    }, {
+      model: 'Netgear C6250EMR',
+      firmwareVersion: 'V2.01.05',
+      port: '8080',
+      defaultUser: 'No authorization needed'
+    }, {
+      model: 'Netgear CG3700EMR',
+      firmwareVersion: 'V2.01.03',
+      port: '8080',
+      defaultUser: 'No authorization needed'
+    }, {
+      model: 'Sagemcom F@st 3890',
+      firmwareVersion: '05.76.6.3a',
+      port: 'unknown',
+      defaultUser: 'unknown'
+    }, {
+      model: 'Sagemcom F@st 3686',
+      firmwareVersion: '4.83.0',
+      port: 'unknown',
+      defaultUser: 'unknown'
+    }, {
+      model: 'COMPAL 7284E',
+      firmwareVersion: '5.510.5.11',
+      port: 'unknown',
+      defaultUser: 'unknown'
+    }, {
+      model: 'COMPAL 7486E',
+      firmwareVersion: '5.510.5.11',
+      port: 'unknown',
+      defaultUser: 'unknown'
+    }, {
+      model: 'Netgear CG3700EMR',
+      firmwareVersion: 'V2.01.05',
+      port: '8080',
+      defaultUser: 'No authorization needed'
+    }
+  ]
+  
+  communityVulnerableModems: modem[] = [
+    {
+      model: 'Technicolor TC4400',
+      firmwareVersion: 'SR70.12.33-180327',
+      port: '8080',
+      defaultUser: 'admin:bEn2o#US9s (Authorization: Basic)'
+    }, {
+      model: 'Surfboard SB8200',
+      firmwareVersion: '0200.174F.311915',
+      port: '80',
+      defaultUser: 'No authorization needed'
+    }
+  ]
 }
 
 export interface PeriodicElement {
@@ -96,56 +163,3 @@ export interface PeriodicElement {
   symbol: string;
 }
 
-const vulnerableModems: modem[] = [
-  {
-    model: 'Sagemcom F@st 3890',
-    firmwareVersion: '50.10.19.*',
-    port: '6080',
-    defaultUser: 'spectrum:spectrum (Authorization: Basic)'
-  }, {
-    model: 'Sagemcom F@st 3686',
-    firmwareVersion: 'SIP_3.428.0-*',
-    port: '6080',
-    defaultUser: 'spectrum:spectrum (Authorization: Basic)'
-  }, {
-    model: 'Technicolor TC7230',
-    firmwareVersion: 'STEB 01.25',
-    port: '8080',
-    defaultUser: 'No authorization needed'
-  }, {
-    model: 'Netgear C6250EMR',
-    firmwareVersion: 'V2.01.05',
-    port: '8080',
-    defaultUser: 'No authorization needed'
-  }, {
-    model: 'Netgear CG3700EMR',
-    firmwareVersion: 'V2.01.03',
-    port: '8080',
-    defaultUser: 'No authorization needed'
-  }, {
-    model: 'Sagemcom F@st 3890',
-    firmwareVersion: '05.76.6.3a',
-    port: 'unknown',
-    defaultUser: 'unknown'
-  }, {
-    model: 'Sagemcom F@st 3686',
-    firmwareVersion: '4.83.0',
-    port: 'unknown',
-    defaultUser: 'unknown'
-  }, {
-    model: 'COMPAL 7284E',
-    firmwareVersion: '5.510.5.11',
-    port: 'unknown',
-    defaultUser: 'unknown'
-  }, {
-    model: 'COMPAL 7486E',
-    firmwareVersion: '5.510.5.11',
-    port: 'unknown',
-    defaultUser: 'unknown'
-  }, {
-    model: 'Netgear CG3700EMR',
-    firmwareVersion: 'V2.01.05',
-    port: '8080',
-    defaultUser: 'No authorization needed'
-  }
-]

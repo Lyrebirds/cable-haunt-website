@@ -215,16 +215,19 @@
               Vulnerable Modems
             </div>
             <p class="mat-body-2">
-              If you know your modems model and firmware version you can try to find it in the following list of modems
+              If you know your modems model and firmware version you can try to find it in the following lists of modems
               confirmed vulnerable.
               The information needed can typically be found in the configuration user interface of the modem, running on
               the default gateway.
-              In the list the firmware version is the latest firmware that have been confirmed to be vulnerable.
+              In the list, the firmware version is the latest firmware that have been confirmed to be vulnerable.
               The port is the port on the local network where the spectrum analyser is running.
               If the spectrum analyser requires credentials, they are also provided together with the authentication
               type used.
             </p>
-            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 mat-body-2">
+            <p class="mat-body-2">
+              <b>Modems confirmed by ISPs or us</b>
+            </p>
+            <table mat-table [dataSource]="vulnerableModems" class="mat-elevation-z8 mat-body-2">
               <ng-container matColumnDef="model">
                 <th mat-header-cell *matHeaderCellDef> Model </th>
                 <td mat-cell *matCellDef="let element"> {{element.model}} </td>
@@ -245,16 +248,38 @@
               <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
             <p class="mat-body-2">
-              If your modem is not in the list above it could still be vulnerable.
+              <b>Modems confirmed by the community</b>
+            </p>
+            <table mat-table [dataSource]="communityVulnerableModems" class="mat-elevation-z8 mat-body-2">
+              <ng-container matColumnDef="model">
+                <th mat-header-cell *matHeaderCellDef> Model </th>
+                <td mat-cell *matCellDef="let element"> {{element.model}} </td>
+              </ng-container>
+              <ng-container matColumnDef="firmwareVersion">
+                <th mat-header-cell *matHeaderCellDef> Firmware Version </th>
+                <td mat-cell *matCellDef="let element"> {{element.firmwareVersion}} </td>
+              </ng-container>
+              <ng-container matColumnDef="port">
+                <th mat-header-cell *matHeaderCellDef> Port </th>
+                <td mat-cell *matCellDef="let element"> {{element.port}} </td>
+              </ng-container>
+              <ng-container matColumnDef="defaultUser">
+                <th mat-header-cell *matHeaderCellDef> Default Credentials </th>
+                <td mat-cell *matCellDef="let element"> {{element.defaultUser}} </td>
+              </ng-container>
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <p class="mat-body-2">
+              If your modem is not in the lists above it could still be vulnerable.
               If you wish to verify if this is the case we highly recommend reading our report before continuing.
               It can be <a (click)="scrollToCenter('technical-report-download-button')">downloaded above</a>.
             </p>
             <p class="mat-body-2">
               The report contains the full exploit and all technical details needed to replicate, understand and test
               for
-              the vulnerability. However, we are working on a tool to check whether your modem is vulnerable, which can
-              be found <a target="_blank" href="https://github.com/Lyrebirds/cable-haunt-vulnerability-test">here</a>
-              once released. <b>ONLY RUN THIS TEST ON EQUIPMENT YOU OWN</b>.
+              the vulnerability. We have also developed a tool to check whether your modem is vulnerable, which can
+              be found <a target="_blank" (click)="scrollToCenter('test-script-repo-button')">above</a>. <b>ONLY RUN THIS TEST ON EQUIPMENT YOU OWN</b>.
               The script automatically scans your network to find the spectrum analyser and tries to establish
               connection to the websocket. The script will test if the modem rejects requests from an external origin,
               by setting the header parameters similar to how a browser or other modern client would. If the
