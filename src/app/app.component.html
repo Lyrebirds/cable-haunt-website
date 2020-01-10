@@ -165,7 +165,8 @@
               Start by determining if you get internet through a cable modem, since only cable modems are affected.
               If you do, you may be affected.
               Most people get their cable modem through their ISP.
-              This means that the ISP is responsible for the firmware running on it and most likely have the means to fix the issue.
+              This means that the ISP is responsible for the firmware running on it and most likely have the means to
+              fix the issue.
               The ISPs that have reported to us that they have fixed their devices, can be seen in the list below.
             </p>
             <p class="mat-body-2">
@@ -178,8 +179,6 @@
                 <mat-list>
                   <mat-list-item> TDC - Denmark </mat-list-item>
                   <mat-list-item> Stofa - Denmark </mat-list-item>
-                  <!-- <mat-list-item> ComHem - Sweden </mat-list-item> -->
-                  <!-- <mat-list-item> Sky - UK </mat-list-item> -->
                   <mat-list-item> Get AS - Norway</mat-list-item>
                   <mat-list-item> Telia Norway </mat-list-item>
                 </mat-list>
@@ -188,25 +187,33 @@
             <p class="mat-body-2">
               If your ISP is not on the list it is still possible that they have fixed the issue, but not informed us.
               We recommend calling them and asking.
-              If you find out they have fixed or are planning to fix the issue, we would very much appreciate if you would inform us at <a href="mailto:cablehaunt@lyrebirds.dk">cablehaunt@lyrebirds.dk</a>
+              If you find out they have fixed or are planning to fix the issue, we would very much appreciate if you
+              would inform us at <a href="mailto:cablehaunt@lyrebirds.dk">cablehaunt@lyrebirds.dk</a>
             </p>
             <p class="mat-body-2">
-              If your modem is not supplied by your IPS og you want to check for yourself we are working on getting as much informamtion as we can on which modems are vulnerable. Several modems have already been confirmed to be vulnerable and we appreciate all the help we can get and have already recieved expanding the list.
+              If your modem is not supplied by your IPS and you want to check for yourself, we are working on getting as
+              much information as we can on which modems are vulnerable. Several modems have already been confirmed to
+              be vulnerable and we appreciate all the help we can get and have already received.
             </p>
             <p class="mat-body-2">
-              Some of these modems have only been confirmed by third parties and modems can therefore occur multiple times with different firmware and have missing information. If you want to help us expand this list, we thank you, and ask that you please read the <a
-                (click)="scrollToAndExpand('faq-how-can-i-help', 5)">"What Should I Do?"-FAQ</a> below and contact us at <a
+              Some of these modems have only been confirmed by third parties, and modems can therefore occur multiple
+              times with different firmware and have missing information. If you want to help us expand this list, we
+              thank you, and ask that you please read the <a (click)="scrollToAndExpand('faq-how-can-i-help', 5)">"What
+                Should I Do?"-FAQ</a> below and contact us at <a
                 href="mailto:cablehaunt@lyrebirds.dk">cablehaunt@lyrebirds.dk</a>.
             </p>
             <div class="mat-title">
               Vulnerable Modems
             </div>
             <p class="mat-body-2">
-              If you know your modems model and firmware version you can try to find it in the following list of modems confirmed vulnerable.
-              The information needed can typically be found in the configuration user interface of the modem, running on the default gateway.
+              If you know your modems model and firmware version you can try to find it in the following list of modems
+              confirmed vulnerable.
+              The information needed can typically be found in the configuration user interface of the modem, running on
+              the default gateway.
               In the list the firmware version is the latest firmware that have been confirmed to be vulnerable.
               The port is the port on the local network where the spectrum analyser is running.
-              If the spectrum analyser requires credentials, they are also provided together with the authentication type used.
+              If the spectrum analyser requires credentials, they are also provided together with the authentication
+              type used.
             </p>
             <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 mat-body-2">
               <ng-container matColumnDef="model">
@@ -230,9 +237,8 @@
             </table>
             <p class="mat-body-2">
               If your modem is not in the list above it could still be vulnerable.
-              If you wish to verify if this is the case we highly recommend reading our report before continuing. 
-              It can be <a
-                (click)="scrollToCenter('technical-report-download-button')">downloaded above</a>.
+              If you wish to verify if this is the case we highly recommend reading our report before continuing.
+              It can be <a (click)="scrollToCenter('technical-report-download-button')">downloaded above</a>.
             </p>
             <p class="mat-body-2">
               The report contains the full exploit and all technical details needed to replicate, understand and test
@@ -334,7 +340,8 @@
                 </p>
                 <p class="mat-body-2">
                   First you should determine which of you modems are vulnerable. We recommend letting your technical
-                  personnel read the <a (click)="scrollToAndExpand('faq-am-i-affected', 0)">"Am I Affected?"-FAQ</a> where they find a list containing modems already known to be vulnerable and
+                  personnel read the <a (click)="scrollToAndExpand('faq-am-i-affected', 0)">"Am I Affected?"-FAQ</a>
+                  where they find a list containing modems already known to be vulnerable and
                   tools that help them test modems not included in the list. We also highly recommend letting your
                   technical personnel download and read <a
                     (click)="scrollToCenter('technical-report-download-button')">the technical report</a>. The report
