@@ -82,6 +82,15 @@
                   color="primary">View Exploit</a>
               </mat-card-actions>
             </mat-card>
+            <mat-card fxLayout="column">
+              <mat-card-title>Test Script</mat-card-title>
+              <mat-card-content>
+                <p>We have developed a script that tests whether your modem is vulnerable. You could still be vulnerable even if the script fails. We recommend reading the <a style="color: rgb(0, 0, 220); cursor: pointer;" (click)="scrollToAndExpand('faq-am-i-affected', 0)">"Am I Affected?"-FAQ</a>.</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <a id="test-script-repo-button" target="_blank" href="https://github.com/Lyrebirds/cable-haunt-vulnerability-test" mat-raised-button color="primary">View Script</a>
+              </mat-card-actions>
+            </mat-card>
           </div>
           <div class="mat-title">Who is Affected</div>
           <p class="mat-body-2">
