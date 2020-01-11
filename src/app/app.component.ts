@@ -152,6 +152,11 @@ export class AppComponent {
       firmwareVersion: '0200.174F.311915',
       port: '80',
       defaultUser: 'No authorization needed'
+    }, {
+      model: 'Netgear CM1000',
+      firmwareVersion: 'unknown',
+      port: '8080',
+      defaultUser: 'admin:password (Authorization: Basic)'
     }
   ]
 }
