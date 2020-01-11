@@ -157,6 +157,12 @@ export class AppComponent {
       firmwareVersion: 'unknown',
       port: '8080',
       defaultUser: 'admin:password (Authorization: Basic)'
+    },
+    {
+      model: 'Netgear CM1000-1AZNAS',
+      firmwareVersion: 'V5.01.04',
+      port: '8080',
+      defaultUser: 'No authorization needed'
     }
   ]
 }
