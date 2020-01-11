@@ -197,7 +197,7 @@
               would inform us at <a href="mailto:cablehaunt@lyrebirds.dk">cablehaunt@lyrebirds.dk</a>
             </p>
             <p class="mat-body-2">
-              If your modem is not supplied by your ISP and you want to check for yourself, you can check if your modem is in the lists of vulnerable modems below. This will require you to know your modems model and firmware version which can typically be found in the configuration user interface of the modem, running on
+              If your modem is not supplied by your ISP, or you want to check for yourself, you can check if your modem is in the lists of vulnerable modems below. This will require you to know your modems model and firmware version which can typically be found in the configuration user interface of the modem, running on
               the default gateway. Later, we will also describe how to manually test your modem and add it to the lists. Several modems have already been confirmed to
               be vulnerable and we are keeping lists updated as we recieve information. We appreciate all the help we can get and have already received. If you want to help us, we
               thank you, and ask that you please read this and the <a (click)="scrollToAndExpand('faq-how-can-i-help', 4)">"What Should I Do?"-FAQ</a> below and contact us at <a
@@ -284,12 +284,13 @@
           <mat-expansion-panel [(expanded)]="expanded[1]">
             <mat-expansion-panel-header>
               <mat-panel-title>
-                Can I Detect If Someone Has Exploited Cable Haunt On My Modem?
+                Have My Modem Already Been Exploited? And Can I Detect it?
               </mat-panel-title>
             </mat-expansion-panel-header>
             <p class="mat-body-2">
-              Most likely not. Since Cable Haunt gains full control of the modem it is very easy for a hacker to hide
-              their tracks.
+              It is very hard to detect whether your cable modem has already been exploited since Cable Haunt can be exploited
+              for full control and a skilled person could therefore thoroughly cover their tracks. However, even though the vulnerability allows arbitrary code to be executed, it 
+              requires a lot of work from the attacker to find the needed commands and craft the package, for exploiting full control. For your average Joe, as long as "easy-to-use" exploit packages for specific modems have not been crafted, they are not the target. Which is one of the reasons for this website and why it is important Cable Haunt is fixed quickly.
             </p>
           </mat-expansion-panel>
           <mat-expansion-panel [(expanded)]="expanded[2]">
