@@ -48,7 +48,7 @@
           </div>
           <p class="mat-body-2">
             Cable Haunt is a critical vulnerability found in cable modems from various manufacturers across the world.
-            The vulnerability enables remote attackers to gain complete control of a cable modem, through an endpoint on
+            The vulnerability enables remote attackers to execute abitrary code on your modem, indirectly through an endpoint on
             the modem. Your cable modem is in charge of the internet traffic for all devices on the network. Cable Haunt
             might therefore be exploited to intercept private messages, redirect traffic, or participation in botnets.
           </p>
@@ -197,29 +197,21 @@
               would inform us at <a href="mailto:cablehaunt@lyrebirds.dk">cablehaunt@lyrebirds.dk</a>
             </p>
             <p class="mat-body-2">
-              If your modem is not supplied by your IPS or you want to check for yourself, we are working on getting as
-              much information as we can on which modems are vulnerable. Several modems have already been confirmed to
-              be vulnerable and we appreciate all the help we can get and have already received.
-            </p>
-            <p class="mat-body-2">
-              Some of these modems have only been confirmed by third parties, and modems can therefore occur multiple
-              times with different firmware and have missing information. If you want to help us expand this list, we
-              thank you, and ask that you please read the <a (click)="scrollToAndExpand('faq-how-can-i-help', 4)">"What
-                Should I Do?"-FAQ</a> below and contact us at <a
+              If your modem is not supplied by your ISP and you want to check for yourself, you can check if your modem is in the lists of vulnerable modems below. This will require you to know your modems model and firmware version which can typically be found in the configuration user interface of the modem, running on
+              the default gateway. Later, we will also describe how to manually test your modem and add it to the lists. Several modems have already been confirmed to
+              be vulnerable and we are keeping lists updated as we recieve information. We appreciate all the help we can get and have already received. If you want to help us, we
+              thank you, and ask that you please read this and the <a (click)="scrollToAndExpand('faq-how-can-i-help', 4)">"What Should I Do?"-FAQ</a> below and contact us at <a
                 href="mailto:cablehaunt@lyrebirds.dk">cablehaunt@lyrebirds.dk</a>.
             </p>
             <div id="faq-vulnerable-modems-sub" class="mat-title">
               Vulnerable Modems
             </div>
             <p class="mat-body-2">
-              If you know your modems model and firmware version you can try to find it in the following lists of modems
-              confirmed vulnerable.
-              The information needed can typically be found in the configuration user interface of the modem, running on
-              the default gateway.
               In the lists, the firmware version is the latest firmware that have been confirmed to be vulnerable.
               The port is the port on the local network where the spectrum analyser is running.
               If the spectrum analyser requires credentials, they are also provided together with the authentication
-              type used.
+              type used. Some of the vulerable modems have only been confirmed by third parties, and modems can therefore occur multiple
+              times with different firmware and have missing information.
             </p>
             <p class="mat-body-2">
               <b>Modems confirmed by ISPs or us</b>
@@ -274,8 +266,7 @@
             </p>
             <p class="mat-body-2">
               The report contains the full exploit and all technical details needed to replicate, understand and test
-              for
-              the vulnerability. However, we have also developed a tool to check whether your modem is vulnerable, which can
+              for the vulnerability. However, we have also developed a tool to check whether your modem is vulnerable, which can
               be found <a target="_blank" (click)="scrollToCenter('test-script-repo-button')">above</a>. <b>ONLY RUN THIS TEST ON EQUIPMENT YOU OWN</b>.
               The script automatically scans your network to find the spectrum analyser and tries to establish
               connection to the websocket. The script will test if the modem rejects requests from an external origin,
