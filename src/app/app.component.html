@@ -485,6 +485,37 @@
               exorcised from all affected modems... Also, spectre was taken.
             </p>
           </mat-expansion-panel>
+          <mat-expansion-panel [(expanded)]="expanded[11]">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                A Branded Vulnerability? Is That Really Warranted?
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p class="mat-body-2">
+              Perhaps not. This is not heartbleed, EternalBlue, Meltdown or Row Hammer, and we have no illusions about this. And yes, Samuel Gross' recent publication of a vulnerability in iMessage much more technically interesting than a buffer overflow in cable modems. While exploitation, websockets aversion to CORS and SOP and creating ROP-chains in MIPS architecture, is interesting it is clear that it is the scale, and its spread across different manufacturers, that gives this vulnerability public significance.
+            </p>
+            <div class="mat-title">
+              So Why Did You Brand It Anyway?
+            </div>
+            <p class="mat-body-2">
+              The vulnerability was found across 4 different vendors, with a strong suspicion that these were not the only ones. (a suspicion that have since been confirmed). We have worked hard for nearly a year now to try and spread the information amongst ISPs, manufacturers and suppliers. And even while some have been graciously working with us, we could tell that it would have taken us several years to get the information out.
+            </p>
+            <p class="mat-body-2"> 
+              At this rate it would eventually leak out of our hands and into organizations with time and resources to take advantage of the vulnerability. This is not fair for the users and would help expand, on scale, the ever growing problems with cyber security companies and people face every day.
+            </p>
+            <p class="mat-body-2">
+              Without a way of unifying the issue across vendors, the chances of it being fixed universally were very slim.
+            </p>
+            <p class="mat-body-2">
+              We are a small unknown crew with no reputation, and could therefore not establish connection with any manufacturers directly, even though we tried. With no avenue for significantly spreading the message, and having no followers, pitching a multistage exploit to major international providers and manufacturers, would not have been noticed by all the right people in time. 
+            </p>
+            <p class="mat-body-2">
+              Due to the origin of the vulnerability, we did not have the option of going to the owner of the code, and let them deploy a patch from a central source. In which case, this website would not exist. 
+            </p>
+            <p class="mat-body-2">
+              From our perspective, our only choice was to go big and branded to try to reach the affected end-users and let awareness bubble up from there. With this we run the risk of being seen as fearmongering upstarts who tries to sensationalize a buffer overflow in modems which some people would say is almost expected to be vulnerable. But this universal acceptance of modems and routers being insecure was not something we wanted to add to.
+            </p>
+          </mat-expansion-panel>
           <mat-expansion-panel [(expanded)]="expanded[9]">
             <mat-expansion-panel-header>
               <mat-panel-title>
