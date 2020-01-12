@@ -472,6 +472,19 @@
               In the report CVE-2019-19495 is explained under appendix C.1.
             </p>
           </mat-expansion-panel>
+          <mat-expansion-panel [(expanded)]="expanded[8]">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Why is it called Cable Haunt?
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p class="mat-body-2">
+              Cable Haunt exists solely in cable modems, where it have lived a silent, invisible and spectral existence.
+              It has haunted the COAX cables across the world for
+              many years and due to its origins in reference code, it will be hard to truly say when it has been
+              exorcised from all affected modems... Also, spectre was taken.
+            </p>
+          </mat-expansion-panel>
           <mat-expansion-panel [(expanded)]="expanded[11]">
             <mat-expansion-panel-header>
               <mat-panel-title>
@@ -479,7 +492,7 @@
               </mat-panel-title>
             </mat-expansion-panel-header>
             <p class="mat-body-2">
-              Perhaps not. This is not heartbleed, EternalBlue, Meltdown or Row Hammer, and we have no illusions about this. And yes, Samuel Gross' recent publication of a vulnerability in iMessage much more technically interesting than a buffer overflow in cable modems. It is clear that the scale is what makes this exploit interesting.
+              Perhaps not. This is not heartbleed, EternalBlue, Meltdown or Row Hammer, and we have no illusions about this. And yes, Samuel Gross' recent publication of a vulnerability in iMessage much more technically interesting than a buffer overflow in cable modems. While exploitation, websockets aversion to CORS and SOP and the effects the MIPS architecture have on the buffer overflow, is interesting it is clear that it is the scale, and how so many different manufacturers can have the same error, is what makes this vulnerability of public significance.
             </p>
             <div class="mat-title">
               So Why Did You Brand It Anyway?
@@ -501,19 +514,6 @@
             </p>
             <p class="mat-body-2">
               From our perspective, our only choice was to go big and branded to try to reach the affected end-users and let awareness bubble up from there. With this we run the risk of being seen as fearmongering upstarts who tries to sensationalize a buffer overflow in modems which some people would say is almost expected to be vulnerable. But this universal acceptance of modems and routers being insecure was not something we wanted to add to.
-            </p>
-          </mat-expansion-panel>
-          <mat-expansion-panel [(expanded)]="expanded[8]">
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Why is it called Cable Haunt?
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <p class="mat-body-2">
-              Cable Haunt exists solely in cable modems, where it have lived a silent, invisible and spectral existence.
-              It has haunted the COAX cables across the world for
-              many years and due to its origins in reference code, it will be hard to truly say when it has been
-              exorcised from all affected modems... Also, spectre was taken.
             </p>
           </mat-expansion-panel>
           <mat-expansion-panel [(expanded)]="expanded[9]">
