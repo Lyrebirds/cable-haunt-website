@@ -333,13 +333,16 @@
           <mat-expansion-panel [(expanded)]="expanded[2]">
             <mat-expansion-panel-header>
               <mat-panel-title>
-                Can Anti-Virus Software And Firewalls Block This Attack?
+                What about Modems in Bridge mode, or behind firewall?
               </mat-panel-title>
             </mat-expansion-panel-header>
             <p class="mat-body-2">
-              Technically it is possible, but this requires a very specific firewall configuration which we suspect
-              nearly
-              nobody to have set up.
+              It is hard to say across all models, if the vulnerable endpoint is available when operating in bridge
+              mode. We have however received several reports from individual users across the world, where the modem was
+              still vulnerable even in bridge mode, so this is definitely not a security guarantee.
+              If your modem is running behind a separate router/gateway, you might be safe by configuring a firewall
+              restriction on the spectrum analyzer. In any case, it is a decent mitigation strategy, while waiting for
+              your ISP to roll out deployments.
             </p>
           </mat-expansion-panel>
           <mat-expansion-panel [(expanded)]="expanded[3]">
