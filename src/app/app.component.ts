@@ -175,7 +175,7 @@ export class AppComponent {
       isp: 'COX US and Comcast'
     },{
       model: 'Netgear CM600',
-      firmwareVersion: 'unknown',
+      firmwareVersion: 'V1.01.14',
       port: '49200',
       defaultUser: 'No authorization needed',
       isp: 'unknown'
