@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { modem } from './modem';
+import { modem, userReportedModem } from './modem';
 
 @Component({
   selector: 'app-root',
@@ -86,6 +86,7 @@ export class AppComponent {
   }
 
   displayedColumns: string[] = ['model', 'firmwareVersion', 'port', 'defaultUser'];
+  displayedUserReportedModemColumns: string[] = ['model', 'firmwareVersion', 'port', 'defaultUser', 'isp'];
 
   vulnerableModems: modem[] = [
     {
@@ -141,41 +142,49 @@ export class AppComponent {
     }
   ]
 
-  communityVulnerableModems: modem[] = [
+  communityVulnerableModems: userReportedModem[] = [
     {
       model: 'Technicolor TC4400',
       firmwareVersion: 'SR70.12.33-180327',
       port: '8080',
-      defaultUser: 'admin:bEn2o#US9s (Authorization: Basic)'
+      defaultUser: 'admin:bEn2o#US9s (Authorization: Basic)',
+      isp: 'unknown'
     }, {
-      model: 'Surfboard SB8200',
+      model: 'Arris Surfboard SB8200',
       firmwareVersion: '0200.174F.311915',
-      port: '80',
-      defaultUser: 'No authorization needed'
+      port: '8080',
+      defaultUser: 'No authorization needed',
+      isp: 'Comcast'
+    }, {
+      model: 'Arris Surfboard CM8200A',
+      firmwareVersion: 'unknown',
+      port: 'unknown',
+      defaultUser: 'unknown',
+      isp: 'Comcast'
+    }, {
+      model: 'Arris Surfboard SB6813­',
+      firmwareVersion: 'D30CM-OSPREY-1.5.2.5-GA-00-NOSH',
+      port: 'unknown',
+      defaultUser: 'unknown',
+      isp: 'Spectrum (previously Time Warner Cable)'
     }, {
       model: 'Netgear CM1000',
       firmwareVersion: 'V6.01.02',
       port: '8080',
-      defaultUser: 'admin:password (Authorization: Basic)'
+      defaultUser: 'admin:password (Authorization: Basic)',
+      isp: 'Comcast'
     }, {
       model: 'Netgear CM1000-1AZNAS',
       firmwareVersion: 'V5.01.04',
       port: '8080',
-      defaultUser: 'No authorization needed'
-    },
-    {
-      model: 'Arris CM8200A',
-      firmwareVersion: 'unknown',
-      port: 'unknown',
-      defaultUser: 'unknown'
+      defaultUser: 'No authorization needed',
+      isp: 'COX US'
+    }, {
+      model: 'Humax HGB10R-02­',
+      firmwareVersion: 'BRGCAB 1.0.03­',
+      port: '8080',
+      defaultUser: 'No authorization needed',
+      isp: 'NET CLARO Brazil­'
     }
   ]
 }
-
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-

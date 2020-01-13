@@ -206,6 +206,7 @@
                   <mat-list-item> Telia Norway </mat-list-item>
                   <mat-list-item> Com Hem / Tele2 - Sweden (Patch being deployed. Power cycles will update vulnerable
                     modems.) </mat-list-item>
+                  <mat-list-item> NetCologne - Germany </mat-list-item>
                 </mat-list>
               </mat-expansion-panel>
             </p>
@@ -281,8 +282,12 @@
                 <th mat-header-cell *matHeaderCellDef> Default Credentials </th>
                 <td mat-cell *matCellDef="let element"> {{element.defaultUser}} </td>
               </ng-container>
-              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              <ng-container matColumnDef="isp">
+                <th mat-header-cell *matHeaderCellDef> ISP of Reporter </th>
+                <td mat-cell *matCellDef="let element"> {{element.isp}} </td>
+              </ng-container>
+              <tr mat-header-row *matHeaderRowDef="displayedUserReportedModemColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedUserReportedModemColumns;"></tr>
             </table>
             <p class="mat-body-2">
               If your modem is not in the lists above it could still be vulnerable.
