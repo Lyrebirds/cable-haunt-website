@@ -62,31 +62,31 @@ export class AppComponent {
     this.expand(index);
     //el.nextSibling. = true;
   }
-  
-  expandAndScrollTo(id:string, index: number) {
+
+  expandAndScrollTo(id: string, index: number) {
     this.expand(index);
     let el = document.getElementById(id);
-    setTimeout(function(){
+    setTimeout(function () {
       el.scrollIntoView({ behavior: "smooth" });
     }, 500);
   }
 
-  scrollToExpandScrollTo(firstId:string, secondId:string, index: number){
+  scrollToExpandScrollTo(firstId: string, secondId: string, index: number) {
     let delay = 0;
-    if(!this.expanded[index]){
+    if (!this.expanded[index]) {
       let el1 = document.getElementById(firstId);
       el1.scrollIntoView({ behavior: "smooth" });
       this.expand(index);
       delay = 1000;
     }
     let el2 = document.getElementById(secondId);
-    setTimeout(function(){
+    setTimeout(function () {
       el2.scrollIntoView({ behavior: "smooth" });
     }, delay);
   }
 
   displayedColumns: string[] = ['model', 'firmwareVersion', 'port', 'defaultUser'];
-  
+
   vulnerableModems: modem[] = [
     {
       model: 'Sagemcom F@st 3890',
@@ -140,7 +140,7 @@ export class AppComponent {
       defaultUser: 'No authorization needed'
     }
   ]
-  
+
   communityVulnerableModems: modem[] = [
     {
       model: 'Technicolor TC4400',
@@ -162,6 +162,12 @@ export class AppComponent {
       firmwareVersion: 'V5.01.04',
       port: '8080',
       defaultUser: 'No authorization needed'
+    },
+    {
+      model: 'Arris CM8200A',
+      firmwareVersion: 'unknown',
+      port: 'unknown',
+      defaultUser: 'unknown'
     }
   ]
 }
