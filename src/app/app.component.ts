@@ -185,6 +185,12 @@ export class AppComponent {
       port: '8080',
       defaultUser: 'No authorization needed',
       isp: 'NET CLARO Brazil­'
+    }, {
+      model: 'Technicolor TC7300­',
+      firmwareVersion: 'STF3.31.11­',
+      port: '8080',
+      defaultUser: 'No authorization needed',
+      isp: 'Claro Colombia­'
     }
   ]
 }
