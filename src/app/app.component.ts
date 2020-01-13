@@ -192,6 +192,13 @@ export class AppComponent {
       port: '8080',
       defaultUser: 'No authorization needed',
       isp: 'Ziggo'
+    },
+    {
+      model: 'Technicolor TC7200',
+      firmwareVersion: 'STDC.01.31',
+      port: '8080',
+      defaultUser: 'No authorization needed',
+      isp: 'Pÿur'
     }
   ]
 }
