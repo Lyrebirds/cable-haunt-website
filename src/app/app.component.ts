@@ -173,7 +173,14 @@ export class AppComponent {
       port: '8080',
       defaultUser: 'admin:password (Authorization: Basic)/no authorization needed - ISP Dependent (Changeable)',
       isp: 'COX US and Comcast'
-    }, {
+    },{
+      model: 'Netgear CM600',
+      firmwareVersion: 'unknown',
+      port: '49200',
+      defaultUser: 'No authorization needed',
+      isp: 'unknown'
+    },
+    {
       model: 'Humax HGB10R-02',
       firmwareVersion: 'BRGCAB 1.0.03',
       port: '8080',
