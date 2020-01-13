@@ -162,10 +162,10 @@ export class AppComponent {
       defaultUser: 'unknown',
       isp: 'Comcast'
     }, {
-      model: 'Arris Surfboard SB6813­',
+      model: 'Arris Surfboard SB6183­',
       firmwareVersion: 'D30CM-OSPREY-1.5.2.5-GA-00-NOSH',
-      port: 'unknown',
-      defaultUser: 'unknown',
+      port: '8080',
+      defaultUser: 'No authorization needed',
       isp: 'Spectrum (previously Time Warner Cable)'
     }, {
       model: 'Netgear CM1000*',
@@ -185,6 +185,13 @@ export class AppComponent {
       port: '8080',
       defaultUser: 'No authorization needed',
       isp: 'Claro Colombia­'
+    }, {
+    
+      model: 'Cisco EPC3928AD',
+      firmwareVersion: 'e3928A-E10-5',
+      port: '8080',
+      defaultUser: 'No authorization needed',
+      isp: 'Ziggo'
     }
   ]
 }
