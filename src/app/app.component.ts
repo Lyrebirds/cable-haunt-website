@@ -168,17 +168,11 @@ export class AppComponent {
       defaultUser: 'unknown',
       isp: 'Spectrum (previously Time Warner Cable)'
     }, {
-      model: 'Netgear CM1000',
+      model: 'Netgear CM1000*',
       firmwareVersion: 'V6.01.02',
       port: '8080',
-      defaultUser: 'admin:password (Authorization: Basic)',
-      isp: 'Comcast'
-    }, {
-      model: 'Netgear CM1000-1AZNAS',
-      firmwareVersion: 'V5.01.04',
-      port: '8080',
-      defaultUser: 'No authorization needed',
-      isp: 'COX US'
+      defaultUser: 'admin:password (Authorization: Basic)/no authorization needed - ISP Dependent (Changeable)',
+      isp: 'COX US and Comcast'
     }, {
       model: 'Humax HGB10R-02­',
       firmwareVersion: 'BRGCAB 1.0.03­',
