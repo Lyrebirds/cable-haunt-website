@@ -174,13 +174,13 @@ export class AppComponent {
       defaultUser: 'admin:password (Authorization: Basic)/no authorization needed - ISP Dependent (Changeable)',
       isp: 'COX US and Comcast'
     }, {
-      model: 'Humax HGB10R-02­',
-      firmwareVersion: 'BRGCAB 1.0.03­',
+      model: 'Humax HGB10R-02',
+      firmwareVersion: 'BRGCAB 1.0.03',
       port: '8080',
       defaultUser: 'No authorization needed',
       isp: 'NET CLARO Brazil­'
     }, {
-      model: 'Technicolor TC7300­',
+      model: 'Technicolor TC7300',
       firmwareVersion: 'STF3.31.11­',
       port: '8080',
       defaultUser: 'No authorization needed',
