@@ -151,10 +151,10 @@ export class AppComponent {
       isp: 'unknown'
     }, {
       model: 'Arris Surfboard SB8200',
-      firmwareVersion: '0200.174F.311915',
+      firmwareVersion: '0200.174F.311915 and D31CM-PEREGRINE-1.1.1.0-GA-11-NOSH­ ',
       port: '8080',
       defaultUser: 'No authorization needed',
-      isp: 'Comcast'
+      isp: 'Comcast and WOW!'
     }, {
       model: 'Arris Surfboard CM8200A',
       firmwareVersion: 'unknown',
