@@ -117,23 +117,23 @@ export class AppComponent {
     }, {
       model: 'Sagemcom F@st 3890',
       firmwareVersion: '05.76.6.3a',
-      port: 'unknown',
-      defaultUser: 'unknown'
+      port: 'Unknown',
+      defaultUser: 'Unknown'
     }, {
       model: 'Sagemcom F@st 3686',
       firmwareVersion: '4.83.0',
-      port: 'unknown',
-      defaultUser: 'unknown'
+      port: 'Unknown',
+      defaultUser: 'Unknown'
     }, {
       model: 'COMPAL 7284E',
       firmwareVersion: '5.510.5.11',
-      port: 'unknown',
-      defaultUser: 'unknown'
+      port: 'Unknown',
+      defaultUser: 'Unknown'
     }, {
       model: 'COMPAL 7486E',
       firmwareVersion: '5.510.5.11',
-      port: 'unknown',
-      defaultUser: 'unknown'
+      port: 'Unknown',
+      defaultUser: 'Unknown'
     }, {
       model: 'Netgear CG3700EMR',
       firmwareVersion: 'V2.01.05',
@@ -148,7 +148,7 @@ export class AppComponent {
       firmwareVersion: 'SR70.12.33-180327',
       port: '8080',
       defaultUser: 'admin:bEn2o#US9s (Authorization: Basic)',
-      isp: 'unknown'
+      isp: 'Unknown'
     }, {
       model: 'Arris Surfboard SB8200',
       firmwareVersion: '0200.174F.311915 and D31CM-PEREGRINE-1.1.1.0-GA-11-NOSH­ ',
@@ -157,9 +157,9 @@ export class AppComponent {
       isp: 'Comcast and WOW!'
     }, {
       model: 'Arris Surfboard CM8200A',
-      firmwareVersion: 'unknown',
-      port: 'unknown',
-      defaultUser: 'unknown',
+      firmwareVersion: 'Unknown',
+      port: 'Unknown',
+      defaultUser: 'Unknown',
       isp: 'Comcast'
     }, {
       model: 'Arris Surfboard SB6183­',
@@ -173,7 +173,13 @@ export class AppComponent {
       port: '8080',
       defaultUser: 'admin:password (Authorization: Basic)/no authorization needed - ISP Dependent (Changeable)',
       isp: 'COX US and Comcast'
-    },{
+    }, {
+      model: 'Netgear CM1150',
+      firmwareVersion: 'V2.02.04',
+      port: '8080',
+      defaultUser: 'admin:password (Changeable)',
+      isp: 'Unknown'
+    }, {
       model: 'Netgear CM600',
       firmwareVersion: 'V1.01.14',
       port: '49200',
