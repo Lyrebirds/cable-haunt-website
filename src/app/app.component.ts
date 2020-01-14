@@ -178,7 +178,7 @@ export class AppComponent {
       firmwareVersion: 'V1.01.14',
       port: '49200',
       defaultUser: 'No authorization needed',
-      isp: 'unknown'
+      isp: 'Spectrum and others'
     },
     {
       model: 'Humax HGB10R-02',
