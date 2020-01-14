@@ -163,10 +163,10 @@ export class AppComponent {
       isp: 'Comcast'
     }, {
       model: 'Arris Surfboard SB6183­',
-      firmwareVersion: 'D30CM-OSPREY-1.5.2.5-GA-00-NOSH',
+      firmwareVersion: 'D30CM-OSPREY-2.4.0.1-GA-02-NOSH',
       port: '8080',
       defaultUser: 'No authorization needed',
-      isp: 'Spectrum (previously Time Warner Cable)'
+      isp: 'COX US and Spectrum'
     }, {
       model: 'Netgear CM1000*',
       firmwareVersion: 'V6.01.02',
