@@ -151,10 +151,10 @@ export class AppComponent {
       isp: 'Unknown'
     }, {
       model: 'Arris Surfboard SB8200',
-      firmwareVersion: '0200.174F.311915 and D31CM-PEREGRINE-1.1.1.0-GA-11-NOSH­ ',
+      firmwareVersion: '0200.174F.311915 and D31CM-PEREGRINE-1.1.1.0-GA-11-NOSH­',
       port: '8080',
       defaultUser: 'No authorization needed',
-      isp: 'Comcast and WOW!'
+      isp: 'Comcast, Spectrum and WOW!'
     }, {
       model: 'Arris Surfboard CM8200A',
       firmwareVersion: 'Unknown',
@@ -163,16 +163,16 @@ export class AppComponent {
       isp: 'Comcast'
     }, {
       model: 'Arris Surfboard SB6183­',
-      firmwareVersion: 'D30CM-OSPREY-2.4.0.1-GA-02-NOSH',
+      firmwareVersion: 'D30CM-OSPREY-2.4.0.1-GA-02-NOSH and SB6183-9.2.0.0-GA-04-37-NOSH­',
       port: '8080',
       defaultUser: 'No authorization needed',
-      isp: 'COX US and Spectrum'
+      isp: 'COX US, Spectrum and RCN'
     }, {
       model: 'Netgear CM1000*',
       firmwareVersion: 'V6.01.02',
       port: '8080',
       defaultUser: 'admin:password (Authorization: Basic)/no authorization needed - ISP Dependent (Changeable)',
-      isp: 'COX US and Comcast'
+      isp: 'COX US, Comcast, and Sparklight'
     }, {
       model: 'Netgear CM1150',
       firmwareVersion: 'V2.02.04',
@@ -199,7 +199,7 @@ export class AppComponent {
       defaultUser: 'No authorization needed',
       isp: 'Claro Colombia­'
     }, {
-    
+
       model: 'Cisco EPC3928AD',
       firmwareVersion: 'e3928A-E10-5',
       port: '8080',
@@ -208,10 +208,31 @@ export class AppComponent {
     },
     {
       model: 'Technicolor TC7200',
-      firmwareVersion: 'STDC.01.31',
+      firmwareVersion: 'STDC.01.31 and STCF.01.44­',
       port: '8080',
       defaultUser: 'No authorization needed',
-      isp: 'Pÿur'
+      isp: 'Pÿur, Citycable, and UPC'
+    },
+    {
+      model: 'Technicolor TC7650',
+      firmwareVersion: '1.0.3 Build 20161117',
+      port: '8080',
+      defaultUser: 'Same as admin console (even if custom)',
+      isp: 'Unknown'
+    },
+    {
+      model: 'Technicolor CGA2121',
+      firmwareVersion: 'CGA2121E-ES-13-E113C5-c7410r5714-190513',
+      port: '8080',
+      defaultUser: 'No authorization needed',
+      isp: 'Serbia BroadBand'
+    },
+    {
+      model: 'COMPAL CH7465LG­',
+      firmwareVersion: 'CH7465LG-NCIP-6.12.18.25-2p6-NOSH­',
+      port: '8080',
+      defaultUser: 'Unknown',
+      isp: 'Unitymedia­'
     }
   ]
 }
