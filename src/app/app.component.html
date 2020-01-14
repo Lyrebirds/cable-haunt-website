@@ -458,6 +458,19 @@
               </mat-expansion-panel>
             </p>
           </mat-expansion-panel>
+          <mat-expansion-panel [(expanded)]="expanded[12]">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Has The Original Error Been Fixed?
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p class="mat-body-2">
+              As mentioned above the error originated from reference code published by Broadcom and released, together with the hardware, to the manufacturers. We have contacted Broadcom several times in the last year both directly and indirectly through ISPs and manufacturers, but not been able to receive any information back. However, just before releasing, we got contacted by Broadcom who informed us that they had fixed the issue in their reference code back in May due to one of our reports, sent through an ISP. Broadcom has not yet responded on what they are doing to inform the manufacturers, that they sent the vulnerable code to.
+            </p>
+            <p class="mat-body-2">
+              Due to the nature of reference code, Broadcom have no centralized release structure to utilize for patching. The manufacturers decide what to do with the code received from Broadcom, and since a large number have copied the vulnerability any patch need to be implemented by the manufacturer. Neither Broadcom nor any of contacted manufacturers have agreed to send os either the original reference code or the patched version. We can therefore not verify how Broadcom have decided to patch the vulnerability in the reference code.
+            </p>
+          </mat-expansion-panel>
           <mat-expansion-panel [(expanded)]="expanded[5]">
             <mat-expansion-panel-header>
               <mat-panel-title>
