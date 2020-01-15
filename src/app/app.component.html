@@ -177,9 +177,14 @@
           </div>
           <div class="mat-title">Exploit Demonstration</div>
           <p class="mat-body-2">
-            Below we have a video demonstrating how the Cable Haunt vulnerability can be exploited on the Sagemcom F@st 3890 modem. The code executing this exploit can be fount in the <a href="https://github.com/Lyrebirds/sagemcom-fast-3890-exploit">POC repository</a>. We chose to make a full exploit for this modem as we have confirmation from Sagemcom that they have a patch ready for this particular modem. We recommend everyone, customers and ISPs, to update to this firmware.
+            Below we have a video demonstrating how the Cable Haunt vulnerability can be exploited on the Sagemcom F@st
+            3890 modem. The code executing this exploit can be fount in the <a
+              href="https://github.com/Lyrebirds/sagemcom-fast-3890-exploit">POC repository</a>. We chose to make a full
+            exploit for this modem as we have confirmation from Sagemcom that they have a patch ready for this
+            particular modem. We recommend everyone, customers and ISPs, to update to this firmware.
           </p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/5FM9mS5ck3Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/5FM9mS5ck3Y" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <div id="questions-and-answers" class="mat-display-2 center">
             FAQ
           </div>
@@ -227,7 +232,7 @@
               version which can typically be found in the configuration user interface of the modem, running on
               the default gateway. Later, we will also describe how to manually test your modem and add it to the lists.
               Several modems have already been confirmed to
-              be vulnerable and we are keeping lists updated as we recieve information. We appreciate all the help we
+              be vulnerable and we are keeping lists updated as we receive information. We appreciate all the help we
               can get and have already received. If you want to help us, we
               thank you, and ask that you please read this and the <a
                 (click)="scrollToAndExpand('faq-how-can-i-help', 4)">"What Should I Do?"-FAQ</a> below and contact us at
@@ -242,7 +247,7 @@
               If the spectrum analyser requires credentials, they are also provided together with the authentication
               type used. Some of the vulnerable modems have only been confirmed by third parties, and modems can
               therefore occur multiple times with different firmware and have missing information.
-              If there is an asterisks at the end, it means that any subversion of model or firmware are vulnerable.  
+              If there is an asterisks at the end, it means that any subversion of model or firmware are vulnerable.
             </p>
             <p class="mat-body-2">
               <b>Modems confirmed by ISPs or us</b>
@@ -465,10 +470,18 @@
               </mat-panel-title>
             </mat-expansion-panel-header>
             <p class="mat-body-2">
-              Yes. The vulnerable endpoint is only accessible on the local network, however due to compatibility concerns, WebSocket is not blocked by CORS and SOP in modern browsers. Since the Spectrum Analyzer webserver does not check the Host and Origin parameters set by the browser any javascript running in the users browser are able to send an exploit package to the modem. This could be exploited by an attacker if you to visit a malicious website or if they embed the code, for instance in an advert, on a trusted website. It is important to point out that this is not the only attack vector that can be employed, vulnerable mail-clients, exploited IoT devices, public networks etc. are also viable attack vectors. 
+              Yes. The vulnerable endpoint is only accessible on the local network, however due to compatibility
+              concerns, WebSocket is not blocked by CORS and SOP in modern browsers. Since the Spectrum Analyzer
+              webserver does not check the Host and Origin parameters set by the browser, any javascript running in the
+              users browser are able to send an exploit package to the modem. This could be exploited by an attacker if
+              you visit a malicious website or if they embed the code, for instance in an advert, on a trusted
+              website. It is important to point out that this is not the only attack vector that can be employed,
+              vulnerable mail-clients, exploited IoT devices, public networks etc. are also viable attack vectors.
             </p>
             <p class="mat-body-2">
-              Many sources report the need for DNS rebind. While DNS rebind can be used in the exploit as explained in <a (click)="scrollToCenter('technical-report-download-button')">the report</a>, it is significantly easier for an attacker to exploit the modem via a direct javascript request.
+              Many sources report the need for DNS rebind. While DNS rebind can be used in the exploit as explained in
+              <a (click)="scrollToCenter('technical-report-download-button')">the report</a>, it is significantly easier
+              for an attacker to exploit the modem via a direct javascript request.
             </p>
           </mat-expansion-panel>
           <mat-expansion-panel [(expanded)]="expanded[12]">
@@ -478,10 +491,20 @@
               </mat-panel-title>
             </mat-expansion-panel-header>
             <p class="mat-body-2">
-              As mentioned above the error originated from reference code published by Broadcom and released, together with the hardware, to the manufacturers. We have contacted Broadcom several times in the last year both directly and indirectly through ISPs and manufacturers, but not been able to receive any information back. However, just before releasing, we got contacted by Broadcom who informed us that they had fixed the issue in their reference code back in May due to one of our reports, sent through an ISP. Broadcom has not yet responded on what they are doing to inform the manufacturers, that they sent the vulnerable code to.
+              As mentioned above the error originated from reference code published by Broadcom and released, together
+              with the hardware, to the manufacturers. We have contacted Broadcom several times in the last year both
+              directly and indirectly through ISPs and manufacturers.
+              Close to the release, we got contacted by Broadcom who informed us that they had fixed the issue
+              in their reference code back in April 2019 due to one of our reports, sent through an ISP. Broadcom has
+              not told us what they are doing to inform the manufacturers, that they sent the vulnerable code to.
             </p>
             <p class="mat-body-2">
-              Due to the nature of reference code, Broadcom have no centralized release structure to utilize for patching. The manufacturers decide what to do with the code received from Broadcom, and since a large number have copied the vulnerability any patch need to be implemented by the manufacturer. Neither Broadcom nor any of contacted manufacturers have agreed to send os either the original reference code or the patched version. We can therefore not verify how Broadcom have decided to patch the vulnerability in the reference code.
+              Due to the nature of reference code, Broadcom have no centralized release structure to utilize for
+              patching. The manufacturers decide what to do with the code received from Broadcom, and since a large
+              number have copied the vulnerability any patch need to be implemented by the manufacturer. Neither
+              Broadcom nor any of contacted manufacturers have agreed to send us either the original reference code or
+              the patched version. We can therefore not verify how Broadcom have decided to patch the vulnerability in
+              the reference code.
             </p>
           </mat-expansion-panel>
           <mat-expansion-panel [(expanded)]="expanded[5]">
