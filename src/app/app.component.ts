@@ -258,10 +258,10 @@ const communityVulnerableModems: userReportedModem[] = [
   },
   {
     model: 'Technicolor TC7210',
-    firmwareVersion: 'STEF.01.29',
+    firmwareVersion: 'STEF.01.36',
     port: '8080',
     defaultUser: 'No authorization needed',
-    isp: 'R Cable y Telecable Telecomunicaciones'
+    isp: 'R Cable y Telecable Telecomunicaciones (Spain) and Kabelplus (Austria)'
   },
   {
     model: 'SMC Electronics SMC D3-CCR-v2',
