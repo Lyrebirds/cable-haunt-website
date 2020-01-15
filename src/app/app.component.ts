@@ -216,10 +216,10 @@ const communityVulnerableModems: userReportedModem[] = [
   }, {
 
     model: 'Cisco EPC3928AD',
-    firmwareVersion: 'e3928A-E10-5',
+    firmwareVersion: 'e3928A-E15-5-E122-c5210r55113-160318ce3928A-E15-5-E122-c5210r55113-160318c',
     port: '8080',
     defaultUser: 'No authorization needed',
-    isp: 'Ziggo'
+    isp: 'Ziggo and Elisa'
   },
   {
     model: 'Technicolor TC7200',
