@@ -254,7 +254,7 @@
             <p class="mat-body-2">
               <b>Modems confirmed by ISPs or us</b>
             </p>
-            <table mat-table [dataSource]="vulnerableModems" class="mat-elevation-z8 mat-body-2">
+            <table mat-table [dataSource]="vulnerableModemsDataSource" class="mat-elevation-z8 mat-body-2">
               <ng-container matColumnDef="model">
                 <th mat-header-cell *matHeaderCellDef> Model </th>
                 <td mat-cell *matCellDef="let element"> {{element.model}} </td>
@@ -277,30 +277,38 @@
             <p class="mat-body-2">
               <b>Modems confirmed by the community</b>
             </p>
-            <table mat-table [dataSource]="communityVulnerableModems" class="mat-elevation-z8 mat-body-2">
-              <ng-container matColumnDef="model">
-                <th mat-header-cell *matHeaderCellDef> Model </th>
-                <td mat-cell *matCellDef="let element"> {{element.model}} </td>
-              </ng-container>
-              <ng-container matColumnDef="firmwareVersion">
-                <th mat-header-cell *matHeaderCellDef> Firmware Version </th>
-                <td mat-cell *matCellDef="let element"> {{element.firmwareVersion}} </td>
-              </ng-container>
-              <ng-container matColumnDef="port">
-                <th mat-header-cell *matHeaderCellDef> Port </th>
-                <td mat-cell *matCellDef="let element"> {{element.port}} </td>
-              </ng-container>
-              <ng-container matColumnDef="defaultUser">
-                <th mat-header-cell *matHeaderCellDef> Default Credentials </th>
-                <td mat-cell *matCellDef="let element"> {{element.defaultUser}} </td>
-              </ng-container>
-              <ng-container matColumnDef="isp">
-                <th mat-header-cell *matHeaderCellDef> ISP of Reporter </th>
-                <td mat-cell *matCellDef="let element"> {{element.isp}} </td>
-              </ng-container>
-              <tr mat-header-row *matHeaderRowDef="displayedUserReportedModemColumns"></tr>
-              <tr mat-row *matRowDef="let row; columns: displayedUserReportedModemColumns;"></tr>
-            </table>
+            <div class="mat-elevation-z8 mat-body-2">
+              <p class="mat-body-2">  
+                <mat-form-field>
+                  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+                </mat-form-field>
+              </p>
+              <table mat-table [dataSource]="communityVulnerableModemsDataSource" matSort>
+                <ng-container matColumnDef="model">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Model </th>
+                  <td mat-cell *matCellDef="let element"> {{element.model}} </td>
+                </ng-container>
+                <ng-container matColumnDef="firmwareVersion">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Firmware Version </th>
+                  <td mat-cell *matCellDef="let element"> {{element.firmwareVersion}} </td>
+                </ng-container>
+                <ng-container matColumnDef="port">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Port </th>
+                  <td mat-cell *matCellDef="let element"> {{element.port}} </td>
+                </ng-container>
+                <ng-container matColumnDef="defaultUser">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Default Credentials </th>
+                  <td mat-cell *matCellDef="let element"> {{element.defaultUser}} </td>
+                </ng-container>
+                <ng-container matColumnDef="isp">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> ISP of Reporter </th>
+                  <td mat-cell *matCellDef="let element"> {{element.isp}} </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedUserReportedModemColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedUserReportedModemColumns;"></tr>
+              </table>
+              <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+            </div>
             <p class="mat-body-2">
               If your modem is not in the lists above it could still be vulnerable.
               If you wish to verify if this is the case we highly recommend reading our report before continuing.
