@@ -178,7 +178,7 @@ export class AppComponent {
       firmwareVersion: 'V2.02.04',
       port: '8080',
       defaultUser: 'admin:password (Changeable)',
-      isp: 'Unknown'
+      isp: 'Comcast'
     }, {
       model: 'Netgear CM600',
       firmwareVersion: 'V1.01.14',
@@ -233,6 +233,20 @@ export class AppComponent {
       port: '8080',
       defaultUser: 'Unknown',
       isp: 'Unitymedia­'
+    },
+    {
+      model: 'Sagemcom F@st 3686 V2.2',
+      firmwareVersion: 'AKADO-SIP_3.436.0­',
+      port: '8080',
+      defaultUser: 'No authorization needed',
+      isp: 'AKADO'
+    },
+    {
+      model: 'Netgear CM500',
+      firmwareVersion: 'V1.01.09­',
+      port: 'Unknown',
+      defaultUser: 'Unknown',
+      isp: 'Spectrum'
     }
   ]
 }

@@ -217,6 +217,8 @@
                   <mat-list-item> Com Hem / Tele2 - Sweden (Patch being deployed. Power cycles will update vulnerable
                     modems.) </mat-list-item>
                   <mat-list-item> NetCologne / NetAachen – Germany (Doesn't use Broadcom-based Modems) </mat-list-item>
+                  <mat-list-item> Vodafone Germany (According to their twitter:
+                    https://twitter.com/vodafoneservice/status/1216771645265924098) </mat-list-item>
                 </mat-list>
               </mat-expansion-panel>
             </p>
@@ -381,19 +383,27 @@
                   </mat-panel-title>
                 </mat-expansion-panel-header>
                 <p class="mat-body-2">
-                  If you have the ability to update your cable modem yourself, do so if your manufacturer have released a patch that fixes the vulnerability.
-                  Unfortunately most ISPs does not allow users to update their modems themselves.
-                  Therefore, for most people the important thing right now is to get this information out to the modem manufacturers as quickly as possible, preferably through your ISP, such that firmware updates can be created and pushed to the modems by the ISP.
+                  If you have the ability to update your cable modem yourself, check if your manufacturer have released
+                  a patch that fixes the vulnerability and apply it.
+                  Unfortunately, for most ISPs users are not able to update their modems themselves.
+                  Therefore, for the vast majority of people the important thing right now is to get this information
+                  out to the modem manufacturers as quickly as possible, preferably through your ISP, such that firmware
+                  updates can be created and pushed to the modems by the ISP.
                   If your ISP have already reported to us that they have fixed the issue, we will add them to the <a
                     (click)="scrollToAndExpand('faq-am-i-affected', 0)">list above</a>.
-                  If your ISP is not in this list, we recommend that you contact them and ask if your unit is or ever was vulnerable to Cable Haunt.
+                  If your ISP is not in this list, we recommend that you contact them and ask if your unit is or ever
+                  was vulnerable to Cable Haunt.
                 </p>
                 <p class="mat-body-2">
-                  If you are a bit more technical, start by checking if the modem is on the <a (click)="scrollToExpandScrollTo('faq-am-i-affected','faq-vulnerable-modems-sub', 0)">list of vulnerable modems</a>. 
+                  If you are a bit more technically minded, start by checking if the modem is on the <a
+                    (click)="scrollToExpandScrollTo('faq-am-i-affected','faq-vulnerable-modems-sub', 0)">list of
+                    vulnerable modems</a>.
                   Even if your modem is not on the list, it may still be vulnerable.
                   We recommend trying see if the Spectrum Analyzer is available and vulnerable.
-                  It can most commonly be found on <a href="http://192.168.100.1:8080">http://192.168.100.1:8080</a> but not always, so please use a port scanner if available.
-                  If found it can be tested with the javascript command or script found <a (click)="scrollToCenter('test-script-repo-button')">above</a>.
+                  It can most commonly be found on <a href="http://192.168.100.1:8080">http://192.168.100.1:8080</a> but
+                  not always, so please use a port scanner if available.
+                  If found it can be tested with the javascript command or script found <a
+                    (click)="scrollToCenter('test-script-repo-button')">above</a>.
                   The script can also help you locate the Spectrum Analyzer automatically.
                 </p>
               </mat-expansion-panel>
