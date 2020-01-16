@@ -252,8 +252,8 @@ const communityVulnerableModems: userReportedModem[] = [
   {
     model: 'Netgear CM500',
     firmwareVersion: 'V1.01.09­',
-    port: 'Unknown',
-    defaultUser: 'Unknown',
+    port: '8080',
+    defaultUser: 'No authorization needed',
     isp: 'Spectrum'
   },
   {
@@ -269,5 +269,26 @@ const communityVulnerableModems: userReportedModem[] = [
     port: '8080',
     defaultUser: 'admin:password',
     isp: 'Xfinity (Comcast)'
+  },
+  {
+    model: 'Zoom 5370',
+    firmwareVersion: '5370-5.5.10.1',
+    port: '22267',
+    defaultUser: 'No authorization needed',
+    isp: 'Spectrum'
+  },
+  {
+    model: 'Technicolor DPC3216',
+    firmwareVersion: 'd3216-P15-12-c6000r55103-160105a',
+    port: '8080',
+    defaultUser: 'No authorization needed',
+    isp: 'Spectrum'
+  },
+  {
+    model: 'Netgear CG3100',
+    firmwareVersion: 'Unknown',
+    port: 'Unknown',
+    defaultUser: 'Unknown',
+    isp: 'VOO (Reboot will apply a patch)'
   }
 ]
