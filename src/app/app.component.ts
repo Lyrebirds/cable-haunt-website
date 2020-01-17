@@ -175,10 +175,10 @@ const communityVulnerableModems: userReportedModem[] = [
     isp: 'Unknown'
   }, {
     model: 'Arris Surfboard SB8200',
-    firmwareVersion: '0200.174F.311915 and D31CM-PEREGRINE-1.1.1.0-GA-11-NOSH­',
+    firmwareVersion: '0200.174F.311915, D31CM-PEREGRINE-1.1.1.0-GA-11-NOSH­, and AB01.01.009.27_081619_183.0A.NSH­',
     port: '8080',
     defaultUser: 'No authorization needed',
-    isp: 'Comcast, Spectrum and WOW!'
+    isp: 'Cox, Comcast, Spectrum and WOW!'
   }, {
     model: 'Arris Surfboard CM8200A',
     firmwareVersion: 'D31CM-PEREGRINE-1.0.1.0-GA-04-NOSH',
