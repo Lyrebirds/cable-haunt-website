@@ -73,15 +73,6 @@
   font-size: 18px;
 }
 
-.mat-cell{
-  padding: 5px;
-  text-align: left;
-}
-
-table {
-  width: 100%;
-}
-
 button.mat-icon-button .mat-icon {
   vertical-align: top;
   font-size: 1.25em;
@@ -164,6 +155,32 @@ mat-card-actions button {
   margin: 10px auto;
 }
 
+.mat-table-sticky:first-child {
+  border-right: 1px solid #e0e0e0;
+}
+
+.table-container {
+  height: auto;
+  overflow: auto;
+}
+
+.mat-table {
+  width: auto;
+  overflow-x: scroll;
+}
+
+.mat-cell,
+.mat-header-cell {
+    padding: 10px 10px 10px 10px;
+    text-align: left;
+}
+
+.youtube-container{
+  margin: 0 auto;
+  width: 560px;
+  height: 316px;
+}
+
 .link{
   color: rgb(0, 0, 220)!important;
 }
@@ -173,6 +190,14 @@ mat-card-actions button {
 }
 
 @media screen and (max-width: 959px) {
+  .mat-sidenav-content{
+    width: 100%;
+  }
+
+  .mat-expansion-panel{
+    width: 100%;
+    margin-right: 0;
+  }
   .mat-expansion-panel-header{
     font-size: 18px;
   }
@@ -184,5 +209,14 @@ mat-card-actions button {
     background-color: black;
     background-size: contain;
     text-align: center;
+  }
+
+  .hero-image {
+    width: auto;
+  }
+  
+  .youtube-container{
+    width: 280px;
+    height: 158px;
   }
 }

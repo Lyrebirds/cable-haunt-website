@@ -22,8 +22,10 @@ export class AppComponent implements OnInit {
 
   expanded: boolean[] = [false, false, false, false, false, false, false, false, false, false, false];
 
-  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
-  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  @ViewChild('vulnerableModemsPaginator', { static: true }) paginator: MatPaginator;
+  @ViewChild('communityVulnerableModemsPaginator', { static: true }) communityPaginator: MatPaginator;
+  @ViewChild('vulnerableModemsTable', { static: true }) sort: MatSort;
+  @ViewChild('communityVulnerableModemsTable', { static: true }) communitySort: MatSort;
 
   displayedColumns: string[] = ['model', 'firmwareVersion', 'port', 'defaultUser'];
   displayedUserReportedModemColumns: string[] = ['model', 'firmwareVersion', 'port', 'defaultUser', 'isp'];
@@ -35,8 +37,11 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     window.addEventListener('scroll', this.scroll, true);
     this.sort.sort(({ id: 'model', start: 'asc' }) as MatSortable);
-    this.communityVulnerableModemsDataSource.paginator = this.paginator;
-    this.communityVulnerableModemsDataSource.sort = this.sort;
+    this.communitySort.sort(({ id: 'model', start: 'asc' }) as MatSortable);
+    this.communityVulnerableModemsDataSource.paginator = this.communityPaginator;
+    this.vulnerableModemsDataSource.paginator = this.paginator;
+    this.communityVulnerableModemsDataSource.sort = this.communitySort;
+    this.vulnerableModemsDataSource.sort = this.sort;
   }
 
   ngOnDestroy() {
@@ -59,7 +64,11 @@ export class AppComponent implements OnInit {
     this.scrolled = event.srcElement.scrollTop > this.scrollLimit;
   }
 
-  applyFilter(filterValue: string) {
+  applyFilterISP(filterValue: string) {
+    this.vulnerableModemsDataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  applyFilterCommunity(filterValue: string) {
     this.communityVulnerableModemsDataSource.filter = filterValue.trim().toLowerCase();
   }
 
@@ -252,8 +261,8 @@ const communityVulnerableModems: userReportedModem[] = [
   {
     model: 'Netgear CM500',
     firmwareVersion: 'V1.01.09­',
-    port: 'Unknown',
-    defaultUser: 'Unknown',
+    port: '8080',
+    defaultUser: 'No authorization needed',
     isp: 'Spectrum'
   },
   {
@@ -269,5 +278,26 @@ const communityVulnerableModems: userReportedModem[] = [
     port: '8080',
     defaultUser: 'admin:password',
     isp: 'Xfinity (Comcast)'
+  },
+  {
+    model: 'Zoom 5370',
+    firmwareVersion: '5370-5.5.10.1',
+    port: '22267',
+    defaultUser: 'No authorization needed',
+    isp: 'Spectrum'
+  },
+  {
+    model: 'Technicolor DPC3216',
+    firmwareVersion: 'd3216-P15-12-c6000r55103-160105a',
+    port: '8080',
+    defaultUser: 'No authorization needed',
+    isp: 'Spectrum'
+  },
+  {
+    model: 'Netgear CG3100',
+    firmwareVersion: 'Unknown',
+    port: 'Unknown',
+    defaultUser: 'Unknown',
+    isp: 'VOO (Reboot will apply a patch)'
   }
 ]
