@@ -181,10 +181,10 @@ const communityVulnerableModems: userReportedModem[] = [
     isp: 'Comcast, Spectrum and WOW!'
   }, {
     model: 'Arris Surfboard CM8200A',
-    firmwareVersion: 'Unknown',
-    port: 'Unknown',
-    defaultUser: 'Unknown',
-    isp: 'Comcast'
+    firmwareVersion: 'D31CM-PEREGRINE-1.0.1.0-GA-04-NOSH',
+    port: '8080',
+    defaultUser: 'admin:password',
+    isp: 'Comcast and RCN'
   }, {
     model: 'Arris Surfboard SB6183­',
     firmwareVersion: 'D30CM-OSPREY-2.4.0.1-GA-02-NOSH and SB6183-9.2.0.0-GA-04-37-NOSH­',
@@ -235,7 +235,7 @@ const communityVulnerableModems: userReportedModem[] = [
     firmwareVersion: 'STDC.01.31 and STCF.01.44­',
     port: '8080',
     defaultUser: 'No authorization needed',
-    isp: 'Pÿur, Citycable, and UPC'
+    isp: 'PŸUR, Citycable, and UPC'
   },
   {
     model: 'Technicolor TC7650',
@@ -287,7 +287,7 @@ const communityVulnerableModems: userReportedModem[] = [
     isp: 'Spectrum'
   },
   {
-    model: 'Technicolor DPC3216',
+    model: 'Cisco/Technicolor DPC3216',
     firmwareVersion: 'd3216-P15-12-c6000r55103-160105a',
     port: '8080',
     defaultUser: 'No authorization needed',
