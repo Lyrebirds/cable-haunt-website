@@ -196,13 +196,13 @@ const communityVulnerableModems: userReportedModem[] = [
     firmwareVersion: 'V6.01.02',
     port: '8080',
     defaultUser: 'admin:password (Authorization: Basic)/no authorization needed - ISP Dependent (Changeable)',
-    isp: 'COX US, Comcast, and Sparklight'
+    isp: 'COX US, Comcast, Sparklight, and Spectrum'
   }, {
     model: 'Netgear CM1150',
     firmwareVersion: 'V2.02.04',
     port: '8080',
     defaultUser: 'admin:password (Changeable)',
-    isp: 'Unknown'
+    isp: 'Comcast'
   }, {
     model: 'Netgear CM600',
     firmwareVersion: 'V1.01.14',
@@ -252,13 +252,6 @@ const communityVulnerableModems: userReportedModem[] = [
     isp: 'Serbia BroadBand'
   },
   {
-    model: 'COMPAL CH7465LG­',
-    firmwareVersion: 'CH7465LG-NCIP-6.12.18.25-2p6-NOSH­',
-    port: '8080',
-    defaultUser: 'Unknown',
-    isp: 'Unitymedia­'
-  },
-  {
     model: 'Sagemcom F@st 3686 V2.2',
     firmwareVersion: 'AKADO-SIP_3.436.0­',
     port: '8080',
@@ -268,16 +261,16 @@ const communityVulnerableModems: userReportedModem[] = [
   {
     model: 'Netgear CM500',
     firmwareVersion: 'V1.01.09­',
-    port: 'Unknown',
-    defaultUser: 'Unknown',
+    port: '8080',
+    defaultUser: 'No authorization needed',
     isp: 'Spectrum'
   },
   {
     model: 'Technicolor TC7210',
-    firmwareVersion: 'STEF.01.29',
+    firmwareVersion: 'STEF.01.36',
     port: '8080',
     defaultUser: 'No authorization needed',
-    isp: 'Unknown'
+    isp: 'R Cable y Telecable Telecomunicaciones (Spain) and Kabelplus (Austria)'
   },
   {
     model: 'SMC Electronics SMC D3-CCR-v2',
@@ -285,5 +278,26 @@ const communityVulnerableModems: userReportedModem[] = [
     port: '8080',
     defaultUser: 'admin:password',
     isp: 'Xfinity (Comcast)'
+  },
+  {
+    model: 'Zoom 5370',
+    firmwareVersion: '5370-5.5.10.1',
+    port: '22267',
+    defaultUser: 'No authorization needed',
+    isp: 'Spectrum'
+  },
+  {
+    model: 'Technicolor DPC3216',
+    firmwareVersion: 'd3216-P15-12-c6000r55103-160105a',
+    port: '8080',
+    defaultUser: 'No authorization needed',
+    isp: 'Spectrum'
+  },
+  {
+    model: 'Netgear CG3100',
+    firmwareVersion: 'Unknown',
+    port: 'Unknown',
+    defaultUser: 'Unknown',
+    isp: 'VOO (Reboot will apply a patch)'
   }
 ]
