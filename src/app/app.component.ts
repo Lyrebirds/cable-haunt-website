@@ -201,7 +201,7 @@ const communityVulnerableModems: userReportedModem[] = [
     model: 'Netgear CM1150',
     firmwareVersion: 'V2.02.04',
     port: '8080',
-    defaultUser: 'admin:password (Changeable)',
+    defaultUser: 'admin:password (Authorization: Basic) (Changeable)',
     isp: 'Comcast'
   }, {
     model: 'Netgear CM600',
@@ -241,7 +241,7 @@ const communityVulnerableModems: userReportedModem[] = [
     model: 'Technicolor TC7650',
     firmwareVersion: '1.0.3 Build 20161117',
     port: '8080',
-    defaultUser: 'Same as admin console (even if custom)',
+    defaultUser: 'admin:admin (Authorization: Basic) (Same as admin console, even if custom)',
     isp: 'Unknown'
   },
   {
@@ -276,7 +276,7 @@ const communityVulnerableModems: userReportedModem[] = [
     model: 'SMC Electronics SMC D3-CCR-v2',
     firmwareVersion: '1.4.0.49-biz',
     port: '8080',
-    defaultUser: 'admin:password',
+    defaultUser: 'admin:password (Authorization: Basic)',
     isp: 'Xfinity (Comcast)'
   },
   {
