@@ -184,7 +184,8 @@
             particular modem. We recommend everyone, customers and ISPs, to update to this firmware.
           </p>
           <div class="youtube-container" layout="row" layout-align="center center">
-            <iframe height="100%" width="100%" src="https://www.youtube.com/embed/5FM9mS5ck3Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe height="100%" width="100%" src="https://www.youtube.com/embed/5FM9mS5ck3Y" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div id="questions-and-answers" class="mat-display-2 center">
             FAQ
@@ -218,8 +219,9 @@
                   <mat-list-item> Com Hem / Tele2 - Sweden (Patch being deployed. Power cycles will update vulnerable
                     modems.) </mat-list-item>
                   <mat-list-item> NetCologne / NetAachen – Germany (Doesn't use Broadcom-based Modems) </mat-list-item>
-                  <mat-list-item> Vodafone Germany (According to their <a target="_blank" href="https://twitter.com/vodafoneservice/status/1216771645265924098">twitter</a>)</mat-list-item>
-                  <mat-list-item> Tele Columbus / PYUR - Germany </mat-list-item>
+                  <mat-list-item> Vodafone Germany (According to their <a target="_blank"
+                      href="https://twitter.com/vodafoneservice/status/1216771645265924098">twitter</a>)</mat-list-item>
+                  <mat-list-item> PŸUR - Germany </mat-list-item>
                   <mat-list-item> Kabelplus - Austria </mat-list-item>
                 </mat-list>
               </mat-expansion-panel>
@@ -257,7 +259,7 @@
               <b>Modems confirmed by ISPs or us</b>
             </p>
             <div class="mat-elevation-z8">
-              <p class="mat-body-2">  
+              <p class="mat-body-2">
                 <mat-form-field>
                   <input matInput (keyup)="applyFilterISP($event.target.value)" placeholder="Filter">
                 </mat-form-field>
@@ -284,19 +286,22 @@
                   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </mat-table>
               </div>
-              <mat-paginator #vulnerableModemsPaginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator >
+              <mat-paginator #vulnerableModemsPaginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons>
+              </mat-paginator>
             </div>
             <p class="mat-body-2">
               <b>Modems confirmed by the community</b>
             </p>
             <div class="mat-elevation-z8">
-              <p class="mat-body-2">  
+              <p class="mat-body-2">
                 <mat-form-field>
-                  <input #communityVulnerableModemsFilter matInput (keyup)="applyFilterCommunity($event.target.value)" placeholder="Filter">
+                  <input #communityVulnerableModemsFilter matInput (keyup)="applyFilterCommunity($event.target.value)"
+                    placeholder="Filter">
                 </mat-form-field>
               </p>
               <div class="table-container">
-                <mat-table #communityVulnerableModemsTable="matSort" matSort mat-table [dataSource]="communityVulnerableModemsDataSource" matSort>
+                <mat-table #communityVulnerableModemsTable="matSort" matSort mat-table
+                  [dataSource]="communityVulnerableModemsDataSource" matSort>
                   <ng-container matColumnDef="model" sticky>
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> Model </th>
                     <td mat-cell *matCellDef="let element"> {{element.model}} </td>
@@ -321,7 +326,8 @@
                   <tr mat-row *matRowDef="let row; columns: displayedUserReportedModemColumns;"></tr>
                 </mat-table>
               </div>
-              <mat-paginator #communityVulnerableModemsPaginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+              <mat-paginator #communityVulnerableModemsPaginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons>
+              </mat-paginator>
             </div>
             <p class="mat-body-2">
               If your modem is not in the lists above it could still be vulnerable.
