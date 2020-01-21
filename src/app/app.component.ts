@@ -177,7 +177,7 @@ const communityVulnerableModems: userReportedModem[] = [
     model: 'Arris Surfboard SB8200',
     firmwareVersion: '0200.174F.311915, D31CM-PEREGRINE-1.1.1.0-GA-11-NOSH­, and AB01.01.009.27_081619_183.0A.NSH­',
     port: '8080',
-    defaultUser: 'No authorization needed',
+    defaultUser: 'No authorization needed / admin:password',
     isp: 'Cox, Comcast, Spectrum and WOW!'
   }, {
     model: 'Arris Surfboard CM8200A',
@@ -295,9 +295,16 @@ const communityVulnerableModems: userReportedModem[] = [
   },
   {
     model: 'Netgear CG3100',
+    firmwareVersion: 'Unknown (prior to V2.03.03)',
+    port: '8080',
+    defaultUser: 'No authorization needed',
+    isp: 'VOO (Reboot will apply a patch)'
+  },
+  {
+    model: 'Technicolor EPC3940L',
     firmwareVersion: 'Unknown',
     port: 'Unknown',
     defaultUser: 'Unknown',
-    isp: 'VOO (Reboot will apply a patch)'
+    isp: 'Salzburg AG (Austria)'
   }
 ]
