@@ -152,7 +152,15 @@ mat-card-content {
 }
 
 mat-card-actions button {
-  margin: 10px auto;
+  margin: 10px 10px 10px 10px;
+}
+
+mat-card-actions a {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.center-container{
+  align-content: center;
 }
 
 .mat-table-sticky:first-child {
