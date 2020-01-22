@@ -245,11 +245,11 @@ const communityVulnerableModems: userReportedModem[] = [
     isp: 'Unknown'
   },
   {
-    model: 'Technicolor CGA2121',
+    model: 'Technicolor CGA2121E',
     firmwareVersion: 'CGA2121E-ES-13-E113C5-c7410r5714-190513',
     port: '8080',
     defaultUser: 'No authorization needed',
-    isp: 'Serbia BroadBand'
+    isp: 'Serbia BroadBand and Vidanet'
   },
   {
     model: 'Sagemcom F@st 3686 V2.2',
