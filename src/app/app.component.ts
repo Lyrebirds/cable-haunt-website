@@ -190,7 +190,7 @@ const communityVulnerableModems: userReportedModem[] = [
     firmwareVersion: 'D30CM-OSPREY-2.4.0.1-GA-02-NOSH and SB6183-9.2.0.0-GA-04-37-NOSH­',
     port: '8080',
     defaultUser: 'No authorization needed',
-    isp: 'COX US, Spectrum and RCN'
+    isp: 'COX US, Spectrum, RCN and Antietam Broadband'
   }, {
     model: 'Netgear CM1000*',
     firmwareVersion: 'V6.01.02',
