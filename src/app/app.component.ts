@@ -306,5 +306,13 @@ const communityVulnerableModems: userReportedModem[] = [
     port: 'Unknown',
     defaultUser: 'Unknown',
     isp: 'Salzburg AG (Austria)'
+  },
+  {
+    model: 'TP-Link TC7610',
+    firmwareVersion: 'v1.1.0',
+    port: '8080',
+    defaultUser: 'No authorization needed',
+    isp: 'Spectrum'
+
   }
 ]
