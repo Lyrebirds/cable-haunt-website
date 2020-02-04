@@ -313,6 +313,12 @@ const communityVulnerableModems: userReportedModem[] = [
     port: '8080',
     defaultUser: 'No authorization needed',
     isp: 'Spectrum'
-
+  },
+  {
+    model: 'Netmaster CBW-383ZN',
+    firmwareVersion: '1.0',
+    port: '22267',
+    defaultUser: 'No authorization needed',
+    isp: 'UyduNet'
   }
 ]
