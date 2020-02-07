@@ -320,5 +320,12 @@ const communityVulnerableModems: userReportedModem[] = [
     port: '22267',
     defaultUser: 'No authorization needed',
     isp: 'UyduNet'
-  }
+  },
+  {
+    model: 'Technicolor EPC3949',
+    firmwareVersion: 'e3949A-ES-13-E13B9-c7310r5717-180720',
+    port: '8080',
+    defaultUser: 'No authorization needed',
+    isp: 'Unknown'
+  },
 ]
