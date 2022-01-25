@@ -53,3 +53,9 @@ baseline.json
 
 # Husky
 .husky/_
+
+# System Files
+Thumbs.db
+
+# Other
+.angular
